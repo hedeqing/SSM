@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SSM/ChasingTheWind-api/ChasingTheWind-api.iml" filepath="$PROJECT_DIR$/SSM/ChasingTheWind-api/ChasingTheWind-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/ChasingTheWind-manager.iml" filepath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/ChasingTheWind-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/ChasingTheWind-mapper/ChasingTheWind-mapper.iml" filepath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/ChasingTheWind-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/ChasingTheWind-model.iml" filepath="$PROJECT_DIR$/SSM/ChasingTheWind-model/ChasingTheWind-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/ChasingTheWind-service/ChasingTheWind-service.iml" filepath="$PROJECT_DIR$/SSM/ChasingTheWind-service/ChasingTheWind-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM/SSM.iml" filepath="$PROJECT_DIR$/SSM/SSM.iml" />
+    </modules>
+  </component>
+</project>

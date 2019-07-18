@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ChasingTheWind-api:war">
+    <output-path>$PROJECT_DIR$/SSM/ChasingTheWind-api/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ChasingTheWind-api</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ChasingTheWind-api.war">
+      <element id="artifact" artifact-name="ChasingTheWind-api:war exploded" />
+    </root>
+  </artifact>
+</component>
