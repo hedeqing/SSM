@@ -3,6 +3,7 @@ package com.ssm.controller;
 import com.northuniversity.model.User;
 import com.northuniversity.service.UserService;
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,12 +15,18 @@ import java.util.List;
  * created by hedeqing on 2018/07/04
  * controller层接口类
  */
-@RestController
-@RequestMapping("user")
+@Controller//无数据交互，页面跳转
+//@RestController//有数据交互
+//@RequestMapping("user")
 public class UserController {
     @Autowired
     private  UserService userService;
     Logger log = Logger.getLogger(UserController.class);
+
+    @RequestMapping("index")
+    public String index(){
+        return "index";
+    }
 
     @RequestMapping("select")
     @ResponseBody
