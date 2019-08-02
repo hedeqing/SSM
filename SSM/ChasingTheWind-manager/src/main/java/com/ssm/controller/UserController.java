@@ -39,8 +39,8 @@ public class UserController {
     }
 
     @RequestMapping("addUser")
-    public Object insertUser(int id,String name,int age,String sex){
-        userService.insertUser(id,name,age,sex);
+    public Object insertUser(String uName, String uPassword, int uGender, String uNumber, String uAvator){
+        userService.insertUser(uName,  uPassword,  uGender,  uNumber,  uAvator);
         return "OK";
     }
 

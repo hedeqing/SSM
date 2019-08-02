@@ -14,13 +14,13 @@ import java.util.List;
 public interface UserService {
      List<User> getUser(int id);
 
-     void insertUser(int id, String name, int age, String sex);
+     void insertUser(String uName, String uPassword, int uGender, String uNumber, String uAvator);
 
      List<User> selectAll();
 
      Object update();
 
-     User getUserByName(String uname);
+     User getUserByNumber(String uNumber);
 
      void updateBid(User user);
 }

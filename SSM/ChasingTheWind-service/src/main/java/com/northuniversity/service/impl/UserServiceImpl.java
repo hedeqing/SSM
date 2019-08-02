@@ -29,12 +29,16 @@ public class UserServiceImpl implements UserService {
         return  userMapper.getUser(map);
     }
 
-    public void insertUser(int id, String name, int age, String sex) {
+    @Override
+    public void insertUser(String uName, String uPassword, int uGender, String uNumber, String uAvator) {
         Map param = new HashMap();
-        param.put("id",id);param.put("name",name);
-        param.put("age",age);param.put("sex",sex);
+        param.put("uName",uName);
+        param.put("uPassword",uPassword);
+        param.put("uGender",uGender);
+        param.put("uNumber",uNumber);
         userMapper.insertUser(param);
     }
+    
 
     public List<User> selectAll() {
 
@@ -47,6 +51,11 @@ public class UserServiceImpl implements UserService {
         param.put("name","测试2");
         userMapper.update(param);
         return "OK";
+    }
+
+    @Override
+    public User getUserByNumber(String uNumber) {
+        return null;
     }
 
     public User getUserByName(String uname) {

@@ -1,61 +1,65 @@
 package com.northuniversity.model;
 
+import java.sql.Blob;
+
 public class User {
-    private int id;
-    private String name;
-    private int age;
-    private String sex;
-    private String bid;
+    private String uName;
+    private int uPassword;
+    private String uGender;
+    private String uNumber;
+    private Blob uAvator;
 
     public User() {
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-    public String getBid() {
-        return bid;
-    }
-
-    public void setBid(String bid) {
-        this.bid = bid;
-    }
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", sex='" + sex + '\'' +
-                ", bid='" + bid + '\'' +
+                "uName='" + uName + '\'' +
+                ", uPassword=" + uPassword +
+                ", uGender='" + uGender + '\'' +
+                ", uNumber='" + uNumber + '\'' +
+                ", uAvator='" + uAvator + '\'' +
                 '}';
+    }
+
+    public String getuName() {
+        return uName;
+    }
+
+    public void setuName(String uName) {
+        this.uName = uName;
+    }
+
+    public int getuPassword() {
+        return uPassword;
+    }
+
+    public void setuPassword(int uPassword) {
+        this.uPassword = uPassword;
+    }
+
+    public String getuGender() {
+        return uGender;
+    }
+
+    public void setuGender(String uGender) {
+        this.uGender = uGender;
+    }
+
+    public String getuNumber() {
+        return uNumber;
+    }
+
+    public void setuNumber(String uNumber) {
+        this.uNumber = uNumber;
+    }
+
+    public Blob getuAvator() {
+        return uAvator;
+    }
+
+    public void setuAvator(Blob uAvator) {
+        this.uAvator = uAvator;
     }
 }
