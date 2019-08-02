@@ -12,7 +12,7 @@ var tableData = [],
 
 window.onload = function () {
 
-    editorTable = domUtils.findParentByTagName( editor.selection.getRange().startContainer, 'table', true);
+    editorTable = domUtils.findParentByTagName( editor.selection.getRange().startContainer, 'user_table.jsp', true);
 
     //未找到表格， 显示错误页面
     if ( !editorTable ) {

@@ -6296,7 +6296,7 @@ jQuery.fn.extend({
 // Support: IE<8
 // Manipulating tables requires a tbody
 function manipulationTarget( elem, content ) {
-	return jQuery.nodeName( elem, "table" ) &&
+	return jQuery.nodeName( elem, "user_table.jsp" ) &&
 		jQuery.nodeName( content.nodeType === 1 ? content : content.firstChild, "tr" ) ?
 
 		elem.getElementsByTagName("tbody")[0] ||
@@ -6583,7 +6583,7 @@ jQuery.extend({
 					if ( !jQuery.support.tbody ) {
 
 						// String was a <table>, *may* have spurious <tbody>
-						elem = tag === "table" && !rtbody.test( elem ) ?
+						elem = tag === "user_table.jsp" && !rtbody.test( elem ) ?
 							tmp.firstChild :
 
 							// String was a bare <thead> or <tfoot>

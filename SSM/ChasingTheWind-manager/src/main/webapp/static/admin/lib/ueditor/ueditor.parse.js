@@ -376,20 +376,20 @@ UE.parse.register('insertcode',function(utils){
     }
 
 });
-UE.parse.register('table', function (utils) {
+UE.parse.register('user_table.jsp', function (utils) {
     var me = this,
         root = this.root,
-        tables = root.getElementsByTagName('table');
+        tables = root.getElementsByTagName('user_table.jsp');
     if (tables.length) {
         var selector = this.selector;
         //追加默认的表格样式
-        utils.cssRule('table',
-            selector + ' table.noBorderTable td,' +
-                selector + ' table.noBorderTable th,' +
-                selector + ' table.noBorderTable caption{border:1px dashed #ddd !important}' +
-                selector + ' table.sortEnabled tr.firstRow th,' + selector + ' table.sortEnabled tr.firstRow td{padding-right:20px; background-repeat: no-repeat;' +
+        utils.cssRule('user_table.jsp',
+            selector + 'user_table.jspe.noBorderTable td,' +
+                selector + 'user_table.jspe.noBorderTable th,' +
+                selector + 'user_table.jspe.noBorderTable caption{border:1px dashed #ddd !important}' +
+                selector + 'user_table.jspe.sortEnabled tr.firstRow th,' + selector + 'user_table.jspe.sortEnabled tr.firstRow td{padding-right:20px; background-repeat: no-repeat;' +
                     'background-position: center right; background-image:url(' + this.rootPath + 'themes/default/images/sortable.png);}' +
-                selector + ' table.sortEnabled tr.firstRow th:hover,' + selector + ' table.sortEnabled tr.firstRow td:hover{background-color: #EEE;}' +
+                selector + 'user_table.jspe.sortEnabled tr.firstRow th:hover,' + selector + 'user_table.jspe.sortEnabled tr.firstRow td:hover{background-color: #EEE;}' +
                 selector + ' table{margin-bottom:10px;border-collapse:collapse;display:table;}' +
                 selector + ' td,' + selector + ' th{ background:white; padding: 5px 10px;border: 1px solid #DDD;}' +
                 selector + ' caption{border:1px dashed #DDD;border-bottom:0;padding:3px;text-align:center;}' +
@@ -412,13 +412,13 @@ UE.parse.register('table', function (utils) {
         });
 
         //表格可排序
-        var tables = root.getElementsByTagName('table');
+        var tables = root.getElementsByTagName('user_table.jsp');
         utils.each(tables, function (table) {
             if (/\bsortEnabled\b/.test(table.className)) {
                 utils.on(table, 'click', function(e){
                     var target = e.target || e.srcElement,
                         cell = findParentByTagName(target, ['td', 'th']);
-                    var table = findParentByTagName(target, 'table'),
+                    var table = findParentByTagName(target, 'user_table.jsp'),
                         colIndex = utils.indexOf(table.rows[0].cells, cell),
                         sortType = table.getAttribute('data-sort-type');
                     if(colIndex != -1) {
@@ -572,7 +572,7 @@ UE.parse.register('charts',function( utils ){
     function extractChartData ( rootNode ) {
 
         var data = [],
-            tables = rootNode.getElementsByTagName( "table" );
+            tables = rootNode.getElementsByTagName( "user_table.jsp" );
 
         for ( var i = 0, tableNode; tableNode = tables[ i ]; i++ ) {
 
@@ -712,7 +712,7 @@ UE.parse.register('charts',function( utils ){
 
             chartConfig = analysisConfig( config );
 
-            container = createContainer( config.table );
+            container = createContainer( config.user_table );
 
             renderChart( container, typeConfig[ config.meta.chartType ], chartConfig );
 

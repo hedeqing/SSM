@@ -212,7 +212,7 @@
 	 */
 	parseTable: function () {
 		var options = this.options,
-			table = options.table,
+			table = options.user_table,
 			columns = this.columns,
 			startRow = options.startRow || 0,
 			endRow = options.endRow || Number.MAX_VALUE,
