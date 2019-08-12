@@ -15,8 +15,8 @@ import java.util.List;
  * created by hedeqing on 2018/07/04
  * controller层接口类
  */
-@Controller//无数据交互，页面跳转
-//@RestController//有数据交互
+//@Controller//无数据交互，页面跳转
+@RestController//有数据交互
 //@RequestMapping("user")
 public class UserController {
     @Autowired

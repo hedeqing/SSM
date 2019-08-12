@@ -2,28 +2,41 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ChasingTheWind-manager:war" />
+      <artifact name="ChasingTheWind-manager:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d52cbd6-77c6-4f98-a176-20a4f6acb378" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Concentration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Sensor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_6_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ChasingTheWind_api_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ChasingTheWind_api_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ChasingTheWind_manager_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ChasingTheWind_manager_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/018bf702-1943-4964-8caf-072e91915a16.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/018bf702-1943-4964-8caf-072e91915a16.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_39.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/car_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/car/car_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/sensible_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/sensible/sensible_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/user_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/user/user_table.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-api/ChasingTheWind-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-api/ChasingTheWind-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/ChasingTheWind-manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/ChasingTheWind-manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/classes/com/ssm/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/classes/com/ssm/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-api-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-model-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/admin/index/car_table.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/admin/index/sensible_table.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/admin/index/user_table.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/classes/com/ssm/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/classes/com/ssm/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/classes/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/classes/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-model/ChasingTheWind-model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/ChasingTheWind-model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-model/target/classes/com/northuniversity/model/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/target/classes/com/northuniversity/model/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-model/target/classes/com/northuniversity/model/Sensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/target/classes/com/northuniversity/model/Sensor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-model/target/classes/com/northuniversity/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/target/classes/com/northuniversity/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/ChasingTheWind-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/ChasingTheWind-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/SSM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/SSM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSM/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/SSM/target/" />
@@ -53,24 +66,24 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="demo@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="co_detection_system@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="demo@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="co_detection_system@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="demo@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="co_detection_system@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="demo: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="co_detection_system: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="demo@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="co_detection_system@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="demo: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="co_detection_system: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -83,154 +96,84 @@
     <option name="autoscrollToSource" value="true" />
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SSM" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/views/index.jsp">
+        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-api/src/main/resources/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="390">
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Car.java">
+        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/springmybatis.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="750">
+              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
               <folding>
-                <element signature="e#169#170#0" expanded="true" />
-                <element signature="e#198#199#0" expanded="true" />
-                <element signature="e#242#243#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#312#313#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/user/add_.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-              <folding>
-                <element signature="e#277#278#0" expanded="true" />
-                <element signature="e#308#309#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#396#397#0" expanded="true" />
-                <element signature="e#431#432#0" expanded="true" />
-                <element signature="e#462#463#0" expanded="true" />
-                <element signature="e#510#511#0" expanded="true" />
-                <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#583#584#0" expanded="true" />
-                <element signature="e#612#613#0" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-                <element signature="e#692#693#0" expanded="true" />
-                <element signature="e#725#726#0" expanded="true" />
-                <element signature="e#754#755#0" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#834#835#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Sensor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-              <folding>
-                <element signature="e#217#218#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-                <element signature="e#293#294#0" expanded="true" />
-                <element signature="e#331#332#0" expanded="true" />
-                <element signature="e#373#374#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#564#565#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
-                <element signature="e#693#694#0" expanded="true" />
+                <element signature="e#1352#1368#0" expanded="true" />
+                <element signature="e#1406#1419#0" expanded="true" />
+                <element signature="e#1462#1476#0" expanded="true" />
+                <element signature="e#1519#1537#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Concentration.java">
+        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/jdbc.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="150">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SSM/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="130" column="3" selection-start-line="130" selection-start-column="3" selection-end-line="134" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
               <folding>
-                <element signature="e#369#370#0" expanded="true" />
-                <element signature="e#407#408#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#554#555#0" expanded="true" />
-                <element signature="e#581#582#0" expanded="true" />
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#653#654#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#713#714#0" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#821#822#0" expanded="true" />
-                <element signature="e#849#850#0" expanded="true" />
-                <element signature="e#891#892#0" expanded="true" />
-                <element signature="e#925#926#0" expanded="true" />
-                <element signature="e#957#958#0" expanded="true" />
-                <element signature="e#985#986#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
-                <element signature="e#1094#1095#0" expanded="true" />
-                <element signature="e#1123#1124#0" expanded="true" />
-                <element signature="e#1167#1168#0" expanded="true" />
-                <element signature="e#1203#1204#0" expanded="true" />
-                <element signature="e#1236#1237#0" expanded="true" />
-                <element signature="e#1265#1266#0" expanded="true" />
-                <element signature="e#1309#1310#0" expanded="true" />
-                <element signature="e#1345#1346#0" expanded="true" />
-                <element signature="e#1378#1379#0" expanded="true" />
-                <element signature="e#1407#1408#0" expanded="true" />
-                <element signature="e#1451#1452#0" expanded="true" />
-                <element signature="e#1487#1488#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#806#807#0" expanded="true" />
+                <element signature="e#836#837#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/login.jsp">
+        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/ChasingTheWind-manager.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+            <state relative-caret-position="506">
+              <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -270,9 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SSM/ChasingTheWind-api/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/springmybatis.xml" />
-        <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/views/css/main.css" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/views/index.html" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/views/404.jsp" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/views/icons.html" />
@@ -281,7 +221,6 @@
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/views/page/systemSetting/linkList.js" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/views/css/layui.css" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/views/index.jsp" />
-        <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/pom.xml" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/springmvc.xml" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/admin-info.jsp" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/article-add.jsp" />
@@ -300,7 +239,6 @@
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/rbac-admin.jsp" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/rbac-user-list.jsp" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/system.jsp" />
-        <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/UserController.java" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/static/admin/js/echarts.min.js" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/menu1.jsp" />
@@ -321,6 +259,11 @@
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/User.java" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Car.java" />
         <option value="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Sensor.java" />
+        <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/SSM/pom.xml" />
+        <option value="$PROJECT_DIR$/SSM/ChasingTheWind-api/pom.xml" />
+        <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/jdbc.properties" />
       </list>
     </option>
   </component>
@@ -343,18 +286,24 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="ChasingTheWind-manage Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="ChasingTheWind-api Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="ChasingTheWind-manage Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+          <item name="ChasingTheWind-api Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ChasingTheWind-api Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="mysql:mysql-connector-java:8.0.11" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="952" />
     <option name="y" value="-8" />
     <option name="width" value="976" />
@@ -379,6 +328,79 @@
               <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
               <item name="SSM" type="462c0819:PsiDirectoryNode" />
               <item name="ChasingTheWind-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
@@ -447,6 +469,48 @@
               <item name="ChasingTheWind-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="northuniversity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="northuniversity" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSM" type="462c0819:PsiDirectoryNode" />
+              <item name="ChasingTheWind-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="northuniversity" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
@@ -658,12 +722,12 @@
       <workItem from="1563452158445" duration="4696000" />
       <workItem from="1563517039715" duration="14330000" />
       <workItem from="1565591921282" duration="3850000" />
-      <workItem from="1565598526410" duration="3109000" />
+      <workItem from="1565598526410" duration="5989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61111000" />
+    <option name="totallyTimeSpent" value="63991000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -675,20 +739,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="952" y="-8" width="976" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.52292573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49757674" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.5024233" side_tool="true" weight="0.2553305" />
       <window_info id="Web" order="7" sideWeight="0.50080776" side_tool="true" weight="0.26066098" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.3286334" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -702,7 +766,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3286334" />
       <window_info anchor="bottom" id="Database Changes" order="14" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.329718" />
-      <window_info anchor="bottom" id="Database Console" order="16" weight="0.32936078" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.3286334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -725,113 +789,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/danye-detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/email-write.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/menu2.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/menu-add2.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/rbac-admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/article-list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080">
-          <caret column="65" selection-start-column="65" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/email.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="23" column="57" lean-forward="true" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/danye-list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="163" column="92" selection-start-line="163" selection-start-column="88" selection-end-line="163" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/static/admin/js/echarts.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="1585" selection-start-line="11" selection-start-column="1585" selection-end-line="11" selection-end-column="1585" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/impl/UserServiceImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1083">
-          <folding>
-            <element signature="e#0#1671#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/UserService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#481#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/classes/com/ssm/controller/UserController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1563#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/classes/com/ssm/controller/UserController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#1563#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/admin/index/menu1.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -908,20 +865,6 @@
     <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/static/admin/images/logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/static/admin/layui/css/layui.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -940,18 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,31 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Car.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1106,8 +1012,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Concentration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="368">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding>
             <element signature="e#369#370#0" expanded="true" />
             <element signature="e#407#408#0" expanded="true" />
@@ -1142,6 +1048,127 @@
             <element signature="e#1451#1452#0" expanded="true" />
             <element signature="e#1487#1488#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://018bf702-1943-4964-8caf-072e91915a16/schema/co_detection_system/table/car">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="d177c81d-aa0d-4f55-86bb-c3c627f00b1d">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/mail.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2102" />
+      </provider>
+    </entry>
+    <entry file="das://018bf702-1943-4964-8caf-072e91915a16/schema/co_detection_system/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="d177c81d-aa0d-4f55-86bb-c3c627f00b1d">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-api/ChasingTheWind-api.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-api/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/springmybatis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding>
+            <element signature="e#1352#1368#0" expanded="true" />
+            <element signature="e#1406#1419#0" expanded="true" />
+            <element signature="e#1462#1476#0" expanded="true" />
+            <element signature="e#1519#1537#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="130" column="3" selection-start-line="130" selection-start-column="3" selection-end-line="134" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/ChasingTheWind-manager.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
