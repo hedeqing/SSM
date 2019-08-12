@@ -3,63 +3,52 @@ package com.northuniversity.model;
 import java.sql.Blob;
 
 public class User {
-    private String uName;
-    private int uPassword;
-    private String uGender;
-    private String uNumber;
-    private Blob uAvator;
-
+    private String userName;
+    private String password;
+    private String gender;
+    private String number;
     public User() {
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "uName='" + uName + '\'' +
-                ", uPassword=" + uPassword +
-                ", uGender='" + uGender + '\'' +
-                ", uNumber='" + uNumber + '\'' +
-                ", uAvator='" + uAvator + '\'' +
+                "userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", gender='" + gender + '\'' +
+                ", number='" + number + '\'' +
                 '}';
     }
 
-    public String getuName() {
-        return uName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setuName(String uName) {
-        this.uName = uName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public int getuPassword() {
-        return uPassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setuPassword(int uPassword) {
-        this.uPassword = uPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getuGender() {
-        return uGender;
+    public String getGender() {
+        return gender;
     }
 
-    public void setuGender(String uGender) {
-        this.uGender = uGender;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public String getuNumber() {
-        return uNumber;
+    public String getNumber() {
+        return number;
     }
 
-    public void setuNumber(String uNumber) {
-        this.uNumber = uNumber;
-    }
-
-    public Blob getuAvator() {
-        return uAvator;
-    }
-
-    public void setuAvator(Blob uAvator) {
-        this.uAvator = uAvator;
+    public void setNumber(String number) {
+        this.number = number;
     }
 }

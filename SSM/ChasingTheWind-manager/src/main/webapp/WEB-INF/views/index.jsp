@@ -25,9 +25,9 @@
             				  <li class="layui-nav-item layui-nav-itemed">
             				    <a href="javascript:;"><i class="iconfont">&#xe607;</i>表单管理</a>
             				    <dl class="layui-nav-child">
-            				      <dd><a href="javascript:;" data-url="../../admin/index/user_table.jsp" data-id='1' data-text="用户"><span class="l-line"></span>用户</a></dd>
-            				      <dd><a href="javascript:;" data-url="../../admin/index/car_table.jsp" data-id='2' data-text="车辆"><span class="l-line"></span>车辆</a></dd>
-            				      <dd><a href="javascript:;" data-url="../../admin/index/sensible_table.jsp" data-id='3' data-text="传感器"><span class="l-line"></span>传感器</a></dd>
+            				      <dd><a href="javascript:;" data-url="../../admin/index/user/user_table.jsp" data-id='1' data-text="用户"><span class="l-line"></span>用户</a></dd>
+            				      <dd><a href="javascript:;" data-url="../../admin/index/car/car_table.jsp" data-id='2' data-text="车辆"><span class="l-line"></span>车辆</a></dd>
+            				      <dd><a href="javascript:;" data-url="../../admin/index/sensible/sensible_table.jsp" data-id='3' data-text="传感器"><span class="l-line"></span>传感器</a></dd>
             				    </dl>
             				  </li>
 <%--            				  <li class="layui-nav-item">--%>
