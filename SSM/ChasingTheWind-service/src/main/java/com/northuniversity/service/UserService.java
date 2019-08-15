@@ -12,6 +12,7 @@ import java.util.List;
  */
 
 public interface UserService {
+     //user私有的方法放在这
      List<User> getUser(int id);
 
      void insertUser(String uName, String uPassword, int uGender, String uNumber, String uAvator);

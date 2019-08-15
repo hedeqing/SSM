@@ -1,47 +1,20 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>layui</title>
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../../../static/admin/layui/css/layui.css" media="all">
-    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>layui在线调试</title>
+    <link rel="stylesheet" href="../../../static/admin/layui/css/layui.css" charset="UTF-8" media="all">
+    <style>
+        body{margin: 10px;}
+        .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
+    </style>
 </head>
 <body>
-<div style="margin-bottom: 5px;">
 
-    <!-- 示例-970 -->
-    <ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="3820120620"></ins>
-
-</div>
-
-<div class="layui-btn-group demoTable">
-    <button class="layui-btn" data-type="getCheckData">获取选中行数据</button>
-    <button class="layui-btn" data-type="getCheckLength">获取选中数目</button>
-    <button class="layui-btn" data-type="isAll">验证是否全选</button>
-</div>
-
-<table class="layui-table" lay-data="{width: 892, height:330, url:'/demo/table/user/', page:true, id:'idTest'}" lay-filter="demo">
-    <thead>
-    <tr>
-        <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
-        <th lay-data="{field:'id', width:80, sort: true, fixed: true}">ID</th>
-        <th lay-data="{field:'username', width:80}">用户名</th>
-        <th lay-data="{field:'sex', width:80, sort: true}">性别</th>
-        <th lay-data="{field:'city', width:80}">城市</th>
-        <th lay-data="{field:'sign', width:160}">签名</th>
-        <th lay-data="{field:'experience', width:80, sort: true}">积分</th>
-
-        <th lay-data="{field:'classify', width:80}">职业</th>
-        <th lay-data="{field:'wealth', width:135, sort: true}">财富</th>
-        <th lay-data="{field:'score', width:80, sort: true, fixed: 'right'}">评分</th>
-        <th lay-data="{fixed: 'right', width:178, align:'center', toolbar: '#barDemo'}"></th>
-    </tr>
-    </thead>
-</table>
+<table class="layui-hide" id="demo" lay-filter="test"></table>
 
 <script type="text/html" id="barDemo">
     <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
@@ -49,54 +22,199 @@
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
+<%--<div class="layui-tab layui-tab-brief" lay-filter="demo">--%>
+<%--    <ul class="layui-tab-title">--%>
+<%--        <li class="layui-this">演示说明</li>--%>
+<%--        <li>日期</li>--%>
+<%--        <li>分页</li>--%>
+<%--        <li>上传</li>--%>
+<%--        <li>滑块</li>--%>
+<%--    </ul>--%>
+<%--    <div class="layui-tab-content">--%>
+<%--        <div class="layui-tab-item layui-show">--%>
 
-<script src="//res.layui.com/layui/dist/layui.js" charset="utf-8"></script>
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<%--            <div class="layui-carousel" id="test1">--%>
+<%--                <div carousel-item>--%>
+<%--                    <div><p class="layui-bg-green demo-carousel">在这里，你将以最直观的形式体验 layui！</p></div>--%>
+<%--                    <div><p class="layui-bg-red demo-carousel">在编辑器中可以执行 layui 相关的一切代码</p></div>--%>
+<%--                    <div><p class="layui-bg-blue demo-carousel">你也可以点击左侧导航针对性地试验我们提供的示例</p></div>--%>
+<%--                    <div><p class="layui-bg-orange demo-carousel">如果最左侧的导航的高度超出了你的屏幕</p></div>--%>
+<%--                    <div><p class="layui-bg-cyan demo-carousel">你可以将鼠标移入导航区域，然后滑动鼠标滚轮即可</p></div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <div class="layui-tab-item">--%>
+<%--            <div id="laydateDemo"></div>--%>
+<%--        </div>--%>
+<%--        <div class="layui-tab-item">--%>
+<%--            <div id="pageDemo"></div>--%>
+<%--        </div>--%>
+<%--        <div class="layui-tab-item">--%>
+<%--            <div class="layui-upload-drag" id="uploadDemo">--%>
+<%--                <i class="layui-icon"></i>--%>
+<%--                <p>点击上传，或将文件拖拽到此处</p>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <div class="layui-tab-item">--%>
+<%--            <div id="sliderDemo" style="margin: 50px 20px;"></div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</div>--%>
+
+<%--<blockquote class="layui-elem-quote layui-quote-nm layui-hide" id="footer">layui {{ layui.v }} 提供强力驱动</blockquote>--%>
+
+
+<script src="../../../static/admin/layui/layui.all.js"></script>
 <script>
-    layui.use('user_table.jsp', function(){
-        var table = layui.user_table;
-        //监听表格复选框选择
-        table.on('checkbox(demo)', function(obj){
-            console.log(obj)
+    layui.config({
+        version: '1565652116154' //为了更新 js 缓存，可忽略
+    });
+
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element', 'slider'], function(){
+        var laydate = layui.laydate //日期
+            ,laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            ,table = layui.table //表格
+            ,carousel = layui.carousel //轮播
+            ,upload = layui.upload //上传
+            ,element = layui.element //元素操作
+            ,slider = layui.slider //滑块
+
+        //向世界问个好
+        // layer.msg('Hello World');
+
+        //监听Tab切换
+        element.on('tab(demo)', function(data){
+            layer.tips('切换了 '+ data.index +'：'+ this.innerHTML, this, {
+                tips: 1
+            });
         });
-        //监听工具条
-        table.on('tool(demo)', function(obj){
-            var data = obj.data;
-            if(obj.event === 'detail'){
-                layer.msg('ID：'+ data.id + ' 的查看操作');
-            } else if(obj.event === 'del'){
+
+        //执行一个 table 实例
+        table.render({
+            elem: '#demo'
+            ,height: 420
+            ,url: 'http://localhost:8080/selectAll' //数据接口
+            ,title: '用户表'
+            ,page: true //开启分页
+            ,toolbar: 'default' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
+            ,totalRow: true //开启合计行
+            ,cols: [[ //表头
+                {type: 'checkbox', fixed: false}
+                ,{field: 'id', title: 'ID', width:80, sort: true,  totalRowText: '合计：'}
+                ,{field: 'userName', title: '用户名', width:80}
+                ,{field: 'gender', title: '性别', width:80, sort: true}
+                ,{field: 'number', title: '号码', width: 80, sort: true}
+                ,{field: 'password', title: '密码', width:150}
+                ,{fixed: 'right', width: 300, align:'center', toolbar: '#barDemo'}
+            ]]
+        });
+
+        //监听头工具栏事件
+        table.on('toolbar(test)', function(obj){
+            var checkStatus = table.checkStatus(obj.config.id)
+                ,data = checkStatus.data; //获取选中的数据
+            switch(obj.event){
+                case 'add':
+                    layer.msg('添加');
+                    break;
+                case 'update':
+                    if(data.length === 0){
+                        layer.msg('请选择一行');
+                    } else if(data.length > 1){
+                        layer.msg('只能同时编辑一个');
+                    } else {
+                        layer.alert('编辑 [id]：'+ checkStatus.data[0].id);
+                    }
+                    break;
+                case 'delete':
+                    if(data.length === 0){
+                        layer.msg('请选择一行');
+                    } else {
+                        layer.msg('删除');
+                    }
+                    break;
+            };
+        });
+
+        //监听行工具事件
+        table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+            var data = obj.data //获得当前行数据
+                ,layEvent = obj.event; //获得 lay-event 对应的值
+            if(layEvent === 'detail'){
+                layer.msg('查看操作');
+            } else if(layEvent === 'del'){
                 layer.confirm('真的删除行么', function(index){
-                    obj.del();
+                    obj.del(); //删除对应行（tr）的DOM结构
                     layer.close(index);
+                    //向服务端发送删除指令
                 });
-            } else if(obj.event === 'edit'){
-                layer.alert('编辑行：<br>'+ JSON.stringify(data))
+            } else if(layEvent === 'edit'){
+                layer.msg('编辑操作');
             }
         });
 
-        var $ = layui.$, active = {
-            getCheckData: function(){ //获取选中数据
-                var checkStatus = table.checkStatus('idTest')
-                    ,data = checkStatus.data;
-                layer.alert(JSON.stringify(data));
-            }
-            ,getCheckLength: function(){ //获取选中数目
-                var checkStatus = table.checkStatus('idTest')
-                    ,data = checkStatus.data;
-                layer.msg('选中了：'+ data.length + ' 个');
-            }
-            ,isAll: function(){ //验证是否全选
-                var checkStatus = table.checkStatus('idTest');
-                layer.msg(checkStatus.isAll ? '全选': '未全选')
-            }
-        };
-
-        $('.demoTable .layui-btn').on('click', function(){
-            var type = $(this).data('type');
-            active[type] ? active[type].call(this) : '';
+        //执行一个轮播实例
+        carousel.render({
+            elem: '#test1'
+            ,width: '100%' //设置容器宽度
+            ,height: 200
+            ,arrow: 'none' //不显示箭头
+            ,anim: 'fade' //切换动画方式
         });
+
+        //将日期直接嵌套在指定容器中
+        var dateIns = laydate.render({
+            elem: '#laydateDemo'
+            ,position: 'static'
+            ,calendar: true //是否开启公历重要节日
+            ,mark: { //标记重要日子
+                '0-10-14': '生日'
+                ,'2018-08-28': '新版'
+                ,'2018-10-08': '神秘'
+            }
+            ,done: function(value, date, endDate){
+                if(date.year == 2017 && date.month == 11 && date.date == 30){
+                    dateIns.hint('一不小心就月底了呢');
+                }
+            }
+            ,change: function(value, date, endDate){
+                layer.msg(value)
+            }
+        });
+
+        //分页
+        laypage.render({
+            elem: 'pageDemo' //分页容器的id
+            ,count: 100 //总页数
+            ,skin: '#1E9FFF' //自定义选中色值
+            //,skip: true //开启跳页
+            ,jump: function(obj, first){
+                if(!first){
+                    layer.msg('第'+ obj.curr +'页', {offset: 'b'});
+                }
+            }
+        });
+
+        //上传
+        upload.render({
+            elem: '#uploadDemo'
+            ,url: '' //上传接口
+            ,done: function(res){
+                console.log(res)
+            }
+        });
+
+        slider.render({
+            elem: '#sliderDemo'
+            ,input: true //输入框
+        });
+
+        //底部信息
+        var footerTpl = lay('#footer')[0].innerHTML;
+        lay('#footer').html(layui.laytpl(footerTpl).render({}))
+            .removeClass('layui-hide');
     });
 </script>
-
 </body>
 </html>
