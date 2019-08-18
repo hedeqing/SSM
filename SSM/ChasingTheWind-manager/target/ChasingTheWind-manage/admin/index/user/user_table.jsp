@@ -2,11 +2,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>layui在线调试</title>
     <link rel="stylesheet" href="../../../static/admin/layui/css/layui.css" charset="UTF-8" media="all">
+    <link rel="stylesheet" href="../../../static/admin/css/global.css" media="all">
     <style>
         body{margin: 10px;}
         .demo-carousel{height: 200px; line-height: 200px; text-align: center;}
@@ -14,57 +16,32 @@
 </head>
 <body>
 
+<div style="margin-bottom: 5px;">
+
+    <!-- 示例-970 -->
+    <ins class="adsbygoogle" style="display:inline-block;width:970px;height:90px" data-ad-client="ca-pub-6111334333458862" data-ad-slot="3820120620"></ins>
+
+</div>
+
+<div class="demoTable" >
+    搜索number：
+    <div class="layui-inline">
+        <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+    </div>
+    <button class="layui-btn" data-type="reload">搜索</button>
+    <button class="layui-btn" onclick="javascript:window.location.href='http://localhost:8080/admin/index/article-detail.jsp' " data-type="add">添加</button>
+</div>
+
 <table class="layui-hide" id="demo" lay-filter="test"></table>
 
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+<%--    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>--%>
     <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
-<%--<div class="layui-tab layui-tab-brief" lay-filter="demo">--%>
-<%--    <ul class="layui-tab-title">--%>
-<%--        <li class="layui-this">演示说明</li>--%>
-<%--        <li>日期</li>--%>
-<%--        <li>分页</li>--%>
-<%--        <li>上传</li>--%>
-<%--        <li>滑块</li>--%>
-<%--    </ul>--%>
-<%--    <div class="layui-tab-content">--%>
-<%--        <div class="layui-tab-item layui-show">--%>
 
-<%--            <div class="layui-carousel" id="test1">--%>
-<%--                <div carousel-item>--%>
-<%--                    <div><p class="layui-bg-green demo-carousel">在这里，你将以最直观的形式体验 layui！</p></div>--%>
-<%--                    <div><p class="layui-bg-red demo-carousel">在编辑器中可以执行 layui 相关的一切代码</p></div>--%>
-<%--                    <div><p class="layui-bg-blue demo-carousel">你也可以点击左侧导航针对性地试验我们提供的示例</p></div>--%>
-<%--                    <div><p class="layui-bg-orange demo-carousel">如果最左侧的导航的高度超出了你的屏幕</p></div>--%>
-<%--                    <div><p class="layui-bg-cyan demo-carousel">你可以将鼠标移入导航区域，然后滑动鼠标滚轮即可</p></div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div class="layui-tab-item">--%>
-<%--            <div id="laydateDemo"></div>--%>
-<%--        </div>--%>
-<%--        <div class="layui-tab-item">--%>
-<%--            <div id="pageDemo"></div>--%>
-<%--        </div>--%>
-<%--        <div class="layui-tab-item">--%>
-<%--            <div class="layui-upload-drag" id="uploadDemo">--%>
-<%--                <i class="layui-icon"></i>--%>
-<%--                <p>点击上传，或将文件拖拽到此处</p>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div class="layui-tab-item">--%>
-<%--            <div id="sliderDemo" style="margin: 50px 20px;"></div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
-
-<%--<blockquote class="layui-elem-quote layui-quote-nm layui-hide" id="footer">layui {{ layui.v }} 提供强力驱动</blockquote>--%>
-
-
-<script src="../../../static/admin/layui/layui.all.js"></script>
+<script src="../../../static/admin/layui/layui.all.js" charset="utf-8"></script>
 <script>
     layui.config({
         version: '1565652116154' //为了更新 js 缓存，可忽略
@@ -96,17 +73,24 @@
             ,height: 420
             ,url: 'http://localhost:8080/selectAll' //数据接口
             ,title: '用户表'
-            ,page: true //开启分页
+            ,id:'testReload'
+            , page: { //分页设定
+                    layout: ['count', 'prev', 'page', 'next'] //自定义分页布局
+                    , curr: 1 //设定初始在第 1 页
+                    , limit: 10//每页多少数据
+                    , groups: 5 //只显示 5 个连续页码
+                } //开启分页
+            ,limits: ['10', '20', '30']
             ,toolbar: 'default' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
             ,totalRow: true //开启合计行
             ,cols: [[ //表头
-                {type: 'checkbox', fixed: false}
-                ,{field: 'id', title: 'ID', width:80, sort: true,  totalRowText: '合计：'}
+                {type: 'checkbox', fixed: false,}
+                ,{field: 'id', title: 'ID', width:80, sort: true}
                 ,{field: 'userName', title: '用户名', width:80}
                 ,{field: 'gender', title: '性别', width:80, sort: true}
                 ,{field: 'number', title: '号码', width: 80, sort: true}
                 ,{field: 'password', title: '密码', width:150}
-                ,{fixed: 'right', width: 300, align:'center', toolbar: '#barDemo'}
+                ,{ width: 300, align:'center', toolbar: '#barDemo'}
             ]]
         });
 
@@ -208,6 +192,29 @@
         slider.render({
             elem: '#sliderDemo'
             ,input: true //输入框
+        });
+
+        // 重载
+        var $ = layui.$, active = {
+            reload: function(){
+                var demoReload = $('#demoReload');
+
+                //执行重载
+                table.reload('testReload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        key: {
+                            id: demoReload.val()
+                        }
+                    }
+                }, 'data');
+            }
+        };
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
         });
 
         //底部信息

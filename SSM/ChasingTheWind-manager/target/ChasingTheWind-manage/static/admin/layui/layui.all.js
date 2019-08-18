@@ -267,11 +267,11 @@ layui.define(function (e) {
             next: function () {
                 return a.next ? '<a href="javascript:;" class="layui-laypage-next' + (a.curr == a.pages ? " " + r : "") + '" data-page="' + (a.curr + 1) + '">' + a.next + "</a>" : ""
             }(),
-            count: '<span class="layui-laypage-count">共 ' + a.count + " &#x6761</span>",
+            count: '<span class="layui-laypage-count">&#x5171; ' + a.count + "&#x6761;</span>",
             limit: function () {
                 var e = ['<span class="layui-laypage-limits"><select lay-ignore>'];
                 return layui.each(a.limits, function (t, n) {
-                    e.push('<option value="' + n + '"' + (n === a.limit ? "selected" : "") + ">" + n + " 条/页</option>")
+                    e.push('<option value="' + n + '"' + (n === a.limit ? "selected" : "") + ">" + n + "&#x6761;/&#x9875;</option>")
                 }), e.join("") + "</select></span>"
             }(),
             refresh: ['<a href="javascript:;" data-page="' + a.curr + '" class="layui-laypage-refresh">', '<i class="layui-icon layui-icon-refresh"></i>', "</a>"].join(""),

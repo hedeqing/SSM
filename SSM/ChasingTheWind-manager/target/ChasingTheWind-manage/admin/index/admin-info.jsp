@@ -38,15 +38,15 @@
 				    </div>
 				  </div>
 				  <div class="layui-form-item">
-				    <label class="layui-form-label">邮箱：</label>
+				    <label class="layui-form-label">号码：</label>
 				    <div class="layui-input-block">
-				      <input type="text" name="email" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" value="5303588521@qq.com">
+				      <input type="text" name="email" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" value="240484406@qq.com">
 				    </div>
 				  </div>
 				  <div class="layui-form-item layui-form-text">
 				    <label class="layui-form-label">备注：</label>
 				    <div class="layui-input-block">
-				      <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+				      <textarea name="desc" placeholder="管理员" class="layui-textarea"></textarea>
 				    </div>
 				  </div>
 				  <div class="layui-form-item">

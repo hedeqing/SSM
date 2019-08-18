@@ -31,8 +31,8 @@ public class UserController {
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView toIndex() {
         ModelAndView mv = new ModelAndView("index");
-        return mv;
-    }
+            return mv;
+}
 
     @RequestMapping("select")
     @ResponseBody

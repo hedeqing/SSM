@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
 <head>
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
@@ -30,25 +31,6 @@
             				      <dd><a href="javascript:;" data-url="../../admin/index/sensible/sensible_table.jsp" data-id='3' data-text="传感器"><span class="l-line"></span>传感器</a></dd>
             				    </dl>
             				  </li>
-<%--            				  <li class="layui-nav-item">--%>
-<%--            				    <a href="javascript:;"><i class="iconfont">&#xe608;</i>内容管理</a>--%>
-<%--            				    <dl class="layui-nav-child">--%>
-<%--            				      <dd><a href="javascript:;" data-url="article-list.jsp" data-id='3' data-text="文章管理"><span class="l-line"></span>文章管理</a></dd>--%>
-<%--            				      <dd><a href="javascript:;" data-url="danye-list.jsp" data-id='9' data-text="单页管理"><span class="l-line"></span>单页管理</a></dd>--%>
-<%--            				    </dl>--%>
-<%--            				  </li>--%>
-<%--            				  <li class="layui-nav-item">--%>
-<%--            				    <a href="javascript:;"><i class="iconfont">&#xe604;</i>推荐位管理</a>--%>
-<%--            				  </li>--%>
-<%--            				   <li class="layui-nav-item">--%>
-<%--            				    <a href="javascript:;"><i class="iconfont">&#xe60c;</i>友情链接</a>--%>
-<%--            				  </li>--%>
-<%--            				   <li class="layui-nav-item">--%>
-<%--            				    <a href="javascript:;"><i class="iconfont">&#xe60a;</i>RBAC</a>--%>
-<%--            				  </li>--%>
-<%--            				  <li class="layui-nav-item">--%>
-<%--            				    <a href="javascript:;" data-url="../../admin/index/email.jsp" data-id='4' data-text="邮件系统"><i class="iconfont">&#xe603;</i>邮件系统</a>--%>
-<%--            				  </li>--%>
             				  <li class="layui-nav-item">
             				    <a href="javascript:;"><i class="iconfont">&#xe60d;</i>警报管理</a>
             				  </li>
@@ -83,7 +65,8 @@
                     <a href="javascript:;" data-url="../../admin/index/admin-info.jsp" data-id='5' data-text="个人信息">管理员</a>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;" data-url="../../admin/index/login.jsp" data-id='5' data-text="登录">退出</a>
+                    <a href="http://localhost:8080/admin/index/login.jsp" data-url="" data-id='5' data-text="登录">退出</a>
+<%--                    <a href="javascript:;" data-url="http://localhost:8080/admin/index/login.jsp" data-id='5' data-text="登录">退出</a>--%>
                 </li>
             </ul>
         </div>
