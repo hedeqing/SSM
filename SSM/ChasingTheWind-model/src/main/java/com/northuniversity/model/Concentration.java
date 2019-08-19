@@ -3,13 +3,13 @@ package com.northuniversity.model;
 public class Concentration {
     private  String concentrationId;
     private String data;
-    private  String time0;
-    private  String time4;
-    private  String time8;
-    private  String time12;
+    private  String time0_mg;
+    private  String time4_mg;
+    private  String time8_mg;
+    private  String time12_mg;
 
-    private  String time16;
-    private  String time20;
+    private  String time16_mg;
+    private  String time20_mg;
 
     public Concentration() {
     }
@@ -19,12 +19,12 @@ public class Concentration {
         return "Concentration{" +
                 "concentrationId='" + concentrationId + '\'' +
                 ", data='" + data + '\'' +
-                ", time0='" + time0 + '\'' +
-                ", time4='" + time4 + '\'' +
-                ", time8='" + time8 + '\'' +
-                ", time12='" + time12 + '\'' +
-                ", time16='" + time16 + '\'' +
-                ", time20='" + time20 + '\'' +
+                ", time0_mg='" + time0_mg + '\'' +
+                ", time4_mg='" + time4_mg + '\'' +
+                ", time8_mg='" + time8_mg + '\'' +
+                ", time12_mg='" + time12_mg + '\'' +
+                ", time16_mg='" + time16_mg + '\'' +
+                ", time20_mg='" + time20_mg + '\'' +
                 '}';
     }
 
@@ -44,51 +44,51 @@ public class Concentration {
         this.data = data;
     }
 
-    public String getTime0() {
-        return time0;
+    public String getTime0_mg() {
+        return time0_mg;
     }
 
-    public void setTime0(String time0) {
-        this.time0 = time0;
+    public void setTime0_mg(String time0_mg) {
+        this.time0_mg = time0_mg;
     }
 
-    public String getTime4() {
-        return time4;
+    public String getTime4_mg() {
+        return time4_mg;
     }
 
-    public void setTime4(String time4) {
-        this.time4 = time4;
+    public void setTime4_mg(String time4_mg) {
+        this.time4_mg = time4_mg;
     }
 
-    public String getTime8() {
-        return time8;
+    public String getTime8_mg() {
+        return time8_mg;
     }
 
-    public void setTime8(String time8) {
-        this.time8 = time8;
+    public void setTime8_mg(String time8_mg) {
+        this.time8_mg = time8_mg;
     }
 
-    public String getTime12() {
-        return time12;
+    public String getTime12_mg() {
+        return time12_mg;
     }
 
-    public void setTime12(String time12) {
-        this.time12 = time12;
+    public void setTime12_mg(String time12_mg) {
+        this.time12_mg = time12_mg;
     }
 
-    public String getTime16() {
-        return time16;
+    public String getTime16_mg() {
+        return time16_mg;
     }
 
-    public void setTime16(String time16) {
-        this.time16 = time16;
+    public void setTime16_mg(String time16_mg) {
+        this.time16_mg = time16_mg;
     }
 
-    public String getTime20() {
-        return time20;
+    public String getTime20_mg() {
+        return time20_mg;
     }
 
-    public void setTime20(String time20) {
-        this.time20 = time20;
+    public void setTime20_mg(String time20_mg) {
+        this.time20_mg = time20_mg;
     }
 }

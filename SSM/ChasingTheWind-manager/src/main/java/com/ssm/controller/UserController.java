@@ -2,15 +2,14 @@ package com.ssm.controller;
 
 import com.northuniversity.model.User;
 import com.northuniversity.service.UserService;
-import com.northuniversity.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
 
 import java.util.HashMap;
 import java.util.List;
@@ -50,10 +49,10 @@ public class UserController {
         return "OK";
     }
 
-    @RequestMapping("selectAll")
+    @RequestMapping("selectAllUser")
     public Object selectAll() {
         Map param = new HashMap();
-        List<User> users= userService.selectAll();
+        List<User> users= userService.selectAllUser();
 
         param.put("count",users.size());
         param.put("code",0);

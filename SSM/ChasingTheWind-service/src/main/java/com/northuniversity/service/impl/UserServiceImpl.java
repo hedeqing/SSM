@@ -33,10 +33,11 @@ public class UserServiceImpl extends IBaseServiceImpl<User> implements UserServi
         userMapper.insertUser(param);
     }
 
-
-    public List<User> selectAll() {
-        return userMapper.selectAll();
+    @Override
+    public List<User> selectAllUser() {
+        return userMapper.selectAllUser();
     }
+
 
     public Object update() {
         Map param = new HashMap();

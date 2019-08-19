@@ -31,17 +31,17 @@
             				      <dd><a href="javascript:;" data-url="../../admin/index/sensible/sensible_table.jsp" data-id='3' data-text="传感器"><span class="l-line"></span>传感器</a></dd>
             				    </dl>
             				  </li>
-            				  <li class="layui-nav-item">
-            				    <a href="javascript:;"><i class="iconfont">&#xe60d;</i>警报管理</a>
-            				  </li>
+<%--            				  <li class="layui-nav-item">--%>
+<%--            				    <a href="javascript:;"><i class="iconfont">&#xe60d;</i>警报管理</a>--%>
+<%--            				  </li>--%>
 <%--            				  <li class="layui-nav-item">--%>
 <%--            				    <a href="javascript:;"><i class="iconfont">&#xe600;</i>备份管理</a>--%>
 <%--            				  </li>--%>
 
-            <li class="layui-nav-item">
-                <a href="javascript:;" data-url="../../admin/index/system.jsp" data-id='6' data-text="系统设置"><i
-                        class="iconfont">&#xe60b;</i>系统设置</a>
-            </li>
+<%--            <li class="layui-nav-item">--%>
+<%--                <a href="javascript:;" data-url="../../admin/index/system.jsp" data-id='6' data-text="系统设置"><i--%>
+<%--                        class="iconfont">&#xe60b;</i>系统设置</a>--%>
+<%--            </li>--%>
             <li class="layui-nav-item">
                 <a href="javascript:;" data-url="../../admin/index/admin-info.jsp" data-id='5' data-text="个人信息"><i
                         class="iconfont">&#xe606;</i>个人信息</a>

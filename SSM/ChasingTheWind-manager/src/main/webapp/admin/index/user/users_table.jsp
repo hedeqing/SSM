@@ -40,7 +40,7 @@
         //方法级渲染
         table.render({
             elem: '#LAY_table_user'
-            ,url: 'http://localhost:8080/selectAll'
+            ,url: 'http://localhost:8080/selectAllUser'
             ,cols: [[
                 {type: 'checkbox', fixed: false}
                 ,{field: 'id', title: 'ID', width:80, sort: true,  totalRowText: '合计：'}

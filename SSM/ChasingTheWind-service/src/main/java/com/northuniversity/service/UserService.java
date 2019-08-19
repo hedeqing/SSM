@@ -1,8 +1,7 @@
 package com.northuniversity.service;
 
+
 import com.northuniversity.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -17,7 +16,7 @@ public interface UserService {
 
      void insertUser(String uName, String uPassword, int uGender, String uNumber, String uAvator);
 
-     List<User> selectAll();
+     List<User> selectAllUser();
 
      Object update();
 
