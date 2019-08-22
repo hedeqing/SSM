@@ -3,6 +3,8 @@ package com.northuniversity.mapper;
 
 import com.northuniversity.model.User;
 import org.apache.ibatis.annotations.Param;
+
+
 import java.util.List;
 import java.util.Map;
 
@@ -15,7 +17,7 @@ public interface UserMapper {
 
     void insertUser(@Param("param") Map param);
 
-    List<User> selectAll();
+    List<User> selectAllUser();
 
     void update(@Param("param") Map param);
 

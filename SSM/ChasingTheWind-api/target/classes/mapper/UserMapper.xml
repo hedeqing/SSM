@@ -11,7 +11,7 @@
     <insert id="insertUser" parameterType="java.util.Map">
         INSERT INTO user (id,name,age,sex) values(#{param.id},#{param.name},#{param.age},#{param.sex})
     </insert>
-    <select id="selectAll" resultType="com.northuniversity.model.User">
+    <select id="selectAllUser" resultType="com.northuniversity.model.User">
         SELECT * FROM user
     </select>
     <update id="update" parameterType="java.util.Map">

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.northuniversity.mapper.SensorMapper">
+<!--    <select id="getUser" parameterType="java.util.Map" resultType="com.northuniversity.model.Sensor">-->
+<!--        SELECT *-->
+<!--        FROM Sensor-->
+<!--        where id =#{param.id}-->
+<!--    </select>-->
+<!--    <insert id="insertUser" parameterType="java.util.Map">-->
+<!--        INSERT INTO Sensor (id,name,age,sex) values(#{param.id},#{param.name},#{param.age},#{param.sex})-->
+<!--    </insert>-->
+    <select id="selectAllSensor" resultType="com.northuniversity.model.Sensor">
+        SELECT * FROM sensor
+    </select>
+<!--    <update id="update" parameterType="java.util.Map">-->
+<!--        UPDATE Sensor  SET id=id-#{param.total},age=age+#{param.total}-->
+<!--        WHERE name=#{param.name}-->
+<!--    </update>-->
+<!--    <select id="getUserByName" parameterType="java.lang.String" resultType="com.northuniversity.model.Sensor">-->
+<!--        SELECT * FROM USER  WHERE name=#{param}-->
+<!--    </select>-->
+<!--    <update id="updateBid" parameterType="com.northuniversity.model.Sensor" >-->
+<!--        UPDATE Sensor SET bid=#{param.bid} WHERE id=#{param.id}-->
+<!--    </update>-->
+</mapper>
