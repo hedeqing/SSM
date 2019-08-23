@@ -1,18 +1,11 @@
 package com.northuniversity.model;
 
 public class Car {
+    private  String id;
     private  String number;
     private  String license;
 
     public Car() {
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "number='" + number + '\'' +
-                ", license='" + license + '\'' +
-                '}';
     }
 
     public String getNumber() {
@@ -25,6 +18,23 @@ public class Car {
 
     public String getLicense() {
         return license;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id='" + id + '\'' +
+                ", number='" + number + '\'' +
+                ", license='" + license + '\'' +
+                '}';
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setLicense(String license) {

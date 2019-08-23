@@ -6,7 +6,7 @@
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <meta charset="utf-8">
-<head>
+<head style="margin-top: 0px">
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
 </head>
 <body  class="layui-layout-body" >
-<div class="wrap-container welcome-container">
+<%--<div class="wrap-container welcome-container">--%>
 
     <div class="layui-layout layui-layout-admin">
         <jsp:include page="/jsp/admin/common/header.jsp"></jsp:include>

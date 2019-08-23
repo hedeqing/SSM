@@ -20,14 +20,24 @@
     <!--.demo-carousel{height: 200px; line-height: 200px; text-align: center;}-->
     <!--</style>-->
 </head>
-<body class="layui-layout-body">
+<body class="layui-layout-body" >
 <div class="layui-layout layui-layout-admin">
 
     <jsp:include page="/jsp/admin/common/header.jsp"></jsp:include>
 
 
-    <div class="layui-body">
+    <div class="layui-body" style="margin-top: 5px;margin-left: 5px">
         <!-- 内容主体区域 -->
+
+
+        <div class="demoTable">
+            搜索ID：
+            <div class="layui-inline">
+                <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+            </div>
+            <button class="layui-btn" data-type="reload">搜索</button>
+        </div>
+
         <table class="layui-hide" id="demo" lay-filter="test"></table>
 
         <script type="text/html" id="barDemo">
@@ -73,7 +83,7 @@
         table.render({
             elem: '#demo'
             ,height: 420
-            ,url: 'http://localhost:8080/selectAllUser' //数据接口
+            ,url: 'http://localhost:8080/selectAllSensor' //数据接口
             ,title: '用户表'
             ,page: true //开启分页
             ,cellMinWidth: 80 //全局定义常规单元格的最小宽度
@@ -82,9 +92,9 @@
             ,cols: [[ //表头
                 {type: 'checkbox', fixed: 'left'}
                 ,{field: 'id', title: 'ID', sort: true, fixed: 'left'}
-                ,{field: 'number', title: '号码' }
-                ,{field: 'gender', title: '性别',  sort: true, edit: 'text'}
-                ,{field: 'password', title: '密码',  sort: true}
+                ,{field: 'license', title: '车牌' }
+                ,{field: 'concentrationid', title: '浓度ID',  sort: true, edit: 'text'}
+                ,{field: 'sensorname', title: '传感器名字',  sort: true, edit: 'text'}
                 ,{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}
             ]]
         });
@@ -154,7 +164,28 @@
 
             }
         });
+        var $ = layui.$, active = {
+            reload: function(){
+                var demoReload = $('#demoReload');
 
+                //执行重载
+                table.reload('testReload', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: {
+                        key: {
+                            id: demoReload.val()
+                        }
+                    }
+                }, 'data');
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
         //执行一个轮播实例
         // carousel.render({
         //     elem: '#test1'

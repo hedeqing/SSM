@@ -11,8 +11,10 @@
 
     <!--<meta charset="utf-8">-->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
-    <title>后台大布局</title>
+    <title>后台管理系统</title>
     <link rel="stylesheet" href="../../static/plugins/layuiadmin/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!--<style>-->
 
@@ -29,9 +31,10 @@
 
     <div class="main-layout-body">
 
-<h1>
-    欢迎
-</h1>
+        <h1>
+            欢迎来到后台系统
+        </h1>
+
     </div>
 
     <div class="layui-footer">

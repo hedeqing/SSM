@@ -1,22 +1,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!--<meta charset="utf-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
     <title>后台大布局</title>
-    <link rel="stylesheet" href="${ctx}/static/plugins/layuiadmin/layui/css/layui.css">
+    <link rel="stylesheet" href="/jsp/static/plugins/layuiadmin/layui/css/layui.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--<style>-->
+
+    <!--body{margin: 10px;}-->
+    <!--.demo-carousel{height: 200px; line-height: 200px; text-align: center;}-->
+    <!--</style>-->
 </head>
-<body class="layui-layout-body">
+<body class="layui-layout-body" >
 <div class="layui-layout layui-layout-admin">
 
-    <jsp:include page="/jsp/common/header.jsp"></jsp:include>
+    <jsp:include page="/jsp/admin/common/header.jsp"></jsp:include>
 
 
-    <div class="layui-body">
+    <div class="layui-body" style="margin-top: 5px;margin-left: 5px">
         <!-- 内容主体区域 -->
-        <br>
+
+
         <div class="demoTable">
             搜索ID：
             <div class="layui-inline">
@@ -24,6 +37,7 @@
             </div>
             <button class="layui-btn" data-type="reload">搜索</button>
         </div>
+
         <table class="layui-hide" id="demo" lay-filter="test"></table>
 
         <script type="text/html" id="barDemo">
@@ -41,7 +55,7 @@
 </div>
 
 
-<script src="${ctx}/static/plugins/layuiadmin/layui/layui.js"></script>
+<script src="/jsp/static/plugins/layuiadmin/layui/layui.js"></script>
 <script>
     //JavaScript代码区域
 
@@ -69,7 +83,7 @@
         table.render({
             elem: '#demo'
             ,height: 420
-            ,url: '${ctx}/video/table' //数据接口
+            ,url: 'http://localhost:8080/selectAllCar' //数据接口
             ,title: '用户表'
             ,page: true //开启分页
             ,cellMinWidth: 80 //全局定义常规单元格的最小宽度
@@ -77,13 +91,11 @@
             // ,totalRow: true //开启合计行
             ,cols: [[ //表头
                 {type: 'checkbox', fixed: 'left'}
-                ,{field: 'id', title: 'ID',  sort: true, fixed: 'left', totalRowText: '合计：'}
-                ,{field: 'number', title: 'av号',  sort: true}
-                ,{field: 'name', title: '名字',  sort: true, edit: 'text'}
-                ,{field: 'author', title: '作者',  sort: true, edit: 'text'}
+                ,{field: 'id', title: 'ID', sort: true, fixed: 'left'}
+                ,{field: 'number', title: '号码' }
+                ,{field: 'license', title: '车牌',  sort: true, edit: 'text'}
                 ,{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}
             ]]
-            ,id: 'testReload'
         });
 
         //监听头工具栏事件
@@ -121,22 +133,22 @@
                 layer.confirm('真的删除行么', function(index){
                     obj.del(); //删除对应行（tr）的DOM结构
                     layer.close(index);
+                    //向服务端发送删除指令
+
                     $.ajax({
-                        url:'${ctx}/video/delete/',
+                        url:'${ctx}/user/delete/',
                         type:'post',
                         data:data,
                         success:function (data) {
                             var msg = data.msg
                             layer.msg(msg);
                         }
-                    })
-
-                    //向服务端发送删除指令
+                    });
                 });
             } else if(layEvent === 'edit'){
 
                 $.ajax({
-                    url:'${ctx}/video/update',
+                    url:'${ctx}/user/update',
                     type:'post',
                     data:data,
                     success:function (data1) {
@@ -148,7 +160,6 @@
 
                     }
                 })
-
 
             }
         });
@@ -174,13 +185,66 @@
             var type = $(this).data('type');
             active[type] ? active[type].call(this) : '';
         });
+        //执行一个轮播实例
+        // carousel.render({
+        //     elem: '#test1'
+        //     ,width: '100%' //设置容器宽度
+        //     ,height: 200
+        //     ,arrow: 'none' //不显示箭头
+        //     ,anim: 'fade' //切换动画方式
+        // });
+        //
+        // //将日期直接嵌套在指定容器中
+        // var dateIns = laydate.render({
+        //     elem: '#laydateDemo'
+        //     ,position: 'static'
+        //     ,calendar: true //是否开启公历重要节日
+        //     ,mark: { //标记重要日子
+        //         '0-10-14': '生日'
+        //         ,'2018-08-28': '新版'
+        //         ,'2018-10-08': '神秘'
+        //     }
+        //     ,done: function(value, date, endDate){
+        //         if(date.year == 2017 && date.month == 11 && date.date == 30){
+        //             dateIns.hint('一不小心就月底了呢');
+        //         }
+        //     }
+        //     ,change: function(value, date, endDate){
+        //         layer.msg(value)
+        //     }
+        // });
 
+        //分页
+        // laypage.render({
+        //     elem: 'pageDemo' //分页容器的id
+        //     ,count: 100 //总页数
+        //     ,skin: '#1E9FFF' //自定义选中色值
+        //     //,skip: true //开启跳页
+        //     ,jump: function(obj, first){
+        //         if(!first){
+        //             layer.msg('第'+ obj.curr +'页', {offset: 'b'});
+        //         }
+        //     }
+        // });
 
+        //上传
+        // upload.render({
+        //     elem: '#uploadDemo'
+        //     ,url: '' //上传接口
+        //     ,done: function(res){
+        //         console.log(res)
+        //     }
+        // });
+
+        // slider.render({
+        //     elem: '#sliderDemo'
+        //     ,input: true //输入框
+        // });
 
         //底部信息
-        var footerTpl = lay('#footer')[0].innerHTML;
-        lay('#footer').html(layui.laytpl(footerTpl).render({}))
-            .removeClass('layui-hide');
+        // var footerTpl = lay('#footer')[0].innerHTML;
+        // lay('#footer').html(layui.laytpl(footerTpl).render({}))
+        //     .removeClass('layui-hide');
     });
 </script>
 </body>

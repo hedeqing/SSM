@@ -1,5 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <html>
 <head>
     <meta charset="utf-8">
@@ -8,7 +12,7 @@
     <!--<meta charset="utf-8">-->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
     <title>后台大布局</title>
-    <link rel="stylesheet" href="${ctx}/static/plugins/layuiadmin/layui/css/layui.css">
+    <link rel="stylesheet" href="/jsp/static/plugins/layuiadmin/layui/css/layui.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!--<style>-->
 
@@ -16,14 +20,24 @@
     <!--.demo-carousel{height: 200px; line-height: 200px; text-align: center;}-->
     <!--</style>-->
 </head>
-<body class="layui-layout-body">
+<body class="layui-layout-body" >
 <div class="layui-layout layui-layout-admin">
 
-    <jsp:include page="/jsp/common/header.jsp"></jsp:include>
+    <jsp:include page="/jsp/admin/common/header.jsp"></jsp:include>
 
 
-    <div class="layui-body">
+    <div class="layui-body" style="margin-top: 5px;margin-left: 5px">
         <!-- 内容主体区域 -->
+
+
+        <div class="demoTable">
+            搜索ID：
+            <div class="layui-inline">
+                <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+            </div>
+            <button class="layui-btn" data-type="reload">搜索</button>
+        </div>
+
         <table class="layui-hide" id="demo" lay-filter="test"></table>
 
         <script type="text/html" id="barDemo">
@@ -41,7 +55,7 @@
 </div>
 
 
-<script src="${ctx}/static/plugins/layuiadmin/layui/layui.js"></script>
+<script src="/jsp/static/plugins/layuiadmin/layui/layui.js"></script>
 <script>
     //JavaScript代码区域
 
@@ -69,8 +83,9 @@
         table.render({
             elem: '#demo'
             ,height: 420
-            ,url: '${ctx}/user/table' //数据接口
+            ,url: 'http://localhost:8080/selectAllUser' //数据接口
             ,title: '用户表'
+            ,id:'testReload'
             ,page: true //开启分页
             ,cellMinWidth: 80 //全局定义常规单元格的最小宽度
             ,toolbar: 'default' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
@@ -78,10 +93,10 @@
             ,cols: [[ //表头
                 {type: 'checkbox', fixed: 'left'}
                 ,{field: 'id', title: 'ID', sort: true, fixed: 'left'}
-                ,{field: 'account', title: '账号' }
-                ,{field: 'name', title: '昵称',  sort: true, edit: 'text'}
-                ,{field: 'phone', title: '电话',  sort: true}
-                ,{field: 'email', title: '邮箱',edit: 'text'}
+                ,{field: 'userName', title: '姓名' }
+                ,{field: 'gender', title: '性别',  sort: true, edit: 'text'}
+                ,{field: 'number', title: '号码',  sort: true, edit: 'text'}
+                ,{field: 'password', title: '密码',  sort: true}
                 ,{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}
             ]]
         });
@@ -93,6 +108,15 @@
             switch(obj.event){
                 case 'add':
                     layer.msg('添加');
+                    $.ajax({
+                        url:'',
+                        type:'post',
+                        data:data,
+                        success:function (data) {
+                            var msg = data.msg
+                            layer.msg(msg);
+                        }
+                    });
                     break;
                 case 'update':
                     if(data.length === 0){
@@ -151,7 +175,32 @@
 
             }
         });
+        var $=layui.$,active={
+            reload:function(){
+                var textdemo=$('#demoReload').val();
+                table.reload('textreload',{
+                    url:'http://localhost:8080/user/search',
+                    method:'get',
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    },
+                    where:{
+                        key:textdemo
 
+                    }
+                })
+
+            }
+        }
+        $('.chu .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+
+            if($('#textdemo').val()==""){
+                layer.msg('查询项目不能为空');
+                return false;
+            }
+            active[type] ? active[type].call(this) : '';
+        });
         //执行一个轮播实例
         // carousel.render({
         //     elem: '#test1'

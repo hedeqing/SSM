@@ -15,29 +15,15 @@
     <!-- 头部区域（可配合layui已有的水平导航） -->
     <ul class="layui-nav layui-layout-left">
         <li class="layui-nav-item"><a href="<%=basePath%>/jsp/admin/index/welcome.jsp">控制台</a></li>
-        <li class="layui-nav-item"><a href="">商品管理</a></li>
-        <li class="layui-nav-item"><a href="">用户</a></li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">其它系统</a>
-            <dl class="layui-nav-child">
-                <dd><a href="">邮件管理</a></dd>
-                <dd><a href="">消息管理</a></dd>
-                <dd><a href="">授权管理</a></dd>
-            </dl>
-        </li>
     </ul>
     <ul class="layui-nav layui-layout-right">
         <li class="layui-nav-item">
-            <a href="${ctx}/jsp/user.jsp">
+            <a href="<%=basePath%>/jsp/admin/index/admin-info.jsp">
                 <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
                 ${SESSION_USER.name}
             </a>
-            <dl class="layui-nav-child">
-                <dd><a href="">基本资料</a></dd>
-                <dd><a href="">安全设置</a></dd>
-            </dl>
         </li>
-        <li class="layui-nav-item"><a href="${ctx}/jsp/login.jsp">退出登录</a></li>
+        <li class="layui-nav-item"><a href="<%=basePath%>/jsp/admin/index/login.jsp">退出登录</a></li>
     </ul>
 </div>
 
@@ -49,21 +35,13 @@
             <li class="layui-nav-item layui-nav-itemed">
                 <a class="" href="javascript:;">管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="<%=basePath%>/jsp/admin/user/user_table.jsp">用户管理</a></dd>
-<%--                    <dd><a href="${ctx}/jsp/appCount/videoManager.jsp">视频管理</a></dd>--%>
-                    <dd><a href="">超链接</a></dd>
+                    <dd><a href="<%=basePath%>/jsp/admin/table/user/user_table.jsp">用户管理</a></dd>
+                    <dd><a href="<%=basePath%>/jsp/admin/table/car/car_table.jsp">车辆管理</a></dd>
+                    <dd><a href="<%=basePath%>/jsp/admin/table/sensor/sensor_table.jsp">传感器管理</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">解决方案</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">列表一</a></dd>
-                    <dd><a href="javascript:;">列表二</a></dd>
-                    <dd><a href="">超链接</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item"><a href="">云市场</a></li>
-            <li class="layui-nav-item"><a href="">发布商品</a></li>
+            <li class="layui-nav-item"><a href="<%=basePath%>/jsp/admin/index/admin-info.jsp">个人信息</a></li>
+
         </ul>
     </div>
 </div>
