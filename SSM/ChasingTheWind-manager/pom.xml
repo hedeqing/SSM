@@ -273,6 +273,16 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+
+        <!--============servlet jsp jstL等依赖==========-->
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>

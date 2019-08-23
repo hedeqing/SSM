@@ -114,6 +114,15 @@
             <artifactId>commons-codec</artifactId>
             <version>1.11</version>
         </dependency>
+
+        <!--============servlet jsp jstL等依赖==========-->
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
         <!--mybatis/spring包-->
         <dependency>
             <groupId>org.mybatis</groupId>
