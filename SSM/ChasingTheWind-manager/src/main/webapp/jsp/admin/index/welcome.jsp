@@ -67,8 +67,8 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">选择对象</label>
                         <p></p>
-                        <div class="layui-input-inline">
-                            <select name="modules" lay-verify="required" lay-search="">
+                        <div class="layui-input-inline"  lay-filter="user">
+                            <select name="user" lay-verify="required" lay-search="">
                                 <option value="">直接选择或搜索</option>
                                 <option value="1">layer</option>
                                 <option value="2">form</option>
@@ -92,8 +92,8 @@
                                 <option value="20">radio</option>
                             </select>
                         </div>
-                        <div class="layui-input-inline">
-                            <select name="modules2" lay-verify="required" lay-search="">
+                        <div class="layui-input-inline" lay-filter="car">
+                            <select name="car" lay-verify="required" lay-search="">
                                 <option value="">直接选择或搜索车辆</option>
                                 <option value="1">layer</option>
                                 <option value="2">form</option>
@@ -296,6 +296,7 @@
         $(window).resize(function () {
             myChart.resize();
         })
+
     });
 </script>
 <script>

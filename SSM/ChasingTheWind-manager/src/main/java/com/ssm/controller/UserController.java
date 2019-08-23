@@ -22,7 +22,7 @@ import java.util.Map;
  */
 @Controller//无数据交互，页面跳转
 //@RestController//有数据交互
-//@RequestMapping("user")
+@RequestMapping("user")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -44,10 +44,11 @@ public class UserController {
         return user;
     }
 
+
     @RequestMapping("addUser")
-    public Object insertUser(String uName, String uPassword, int uGender, String uNumber, String uAvator) {
-        userService.insertUser(uName, uPassword, uGender, uNumber, uAvator);
-        return "OK";
+    public Object insertUser() {
+//        userService.insertUser(uName, uPassword, uGender, uNumber, uAvator);
+        return "admin/table/user/user_add";
     }
 
     @RequestMapping("selectAllUser")

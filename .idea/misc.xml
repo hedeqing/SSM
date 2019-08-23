@@ -4,6 +4,9 @@
     <file type="web" url="file://$PROJECT_DIR$/SSM/ChasingTheWind-api" />
     <file type="web" url="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager" />
   </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="JS_1_8_5" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>

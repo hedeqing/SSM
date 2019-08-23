@@ -26,10 +26,10 @@ public class UserServiceImpl extends IBaseServiceImpl<User> implements UserServi
     @Override
     public void insertUser(String uName, String uPassword, int uGender, String uNumber, String uAvator) {
         Map param = new HashMap();
-        param.put("uName",uName);
-        param.put("uPassword",uPassword);
-        param.put("uGender",uGender);
-        param.put("uNumber",uNumber);
+        param.put("userName",uName);
+        param.put("password",uPassword);
+        param.put("gender",uGender);
+        param.put("number",uNumber);
         userMapper.insertUser(param);
     }
 
