@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
@@ -20,7 +21,7 @@
         <li class="layui-nav-item">
             <a href="<%=basePath%>/jsp/admin/index/admin-info.jsp">
                 <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                ${SESSION_USER.name}
+                ${SESSION_USER.userName}
             </a>
         </li>
         <li class="layui-nav-item"><a href="<%=basePath%>/jsp/admin/index/login.jsp">退出登录</a></li>

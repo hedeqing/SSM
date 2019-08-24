@@ -20,7 +20,9 @@ public interface UserService {
 
      Object update();
 
-     User getUserByNumber(String uNumber);
+     User getUser(String number);
+     User get(User user);
 
      void updateBid(User user);
+
 }

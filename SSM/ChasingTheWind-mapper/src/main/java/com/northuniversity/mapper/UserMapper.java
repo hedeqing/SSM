@@ -23,5 +23,8 @@ public interface UserMapper {
 
     User getUserByName(@Param("param") String uname);
 
+    User getUser(@Param("param") String Number);
+
     void updateBid(@Param("param") User user);
+    User selectUser(@Param("param") User user);
 }

@@ -48,9 +48,21 @@ public class UserServiceImpl extends IBaseServiceImpl<User> implements UserServi
     }
 
     @Override
-    public User getUserByNumber(String uNumber) {
+    public User getUser(String number) {
+        return userMapper.getUser(number);
+    }
+
+
+    @Override
+    public User get(User user) {
+        //提前检查
+
+        if(!user.getNumber().equals("") && !user.getPassword().equals("")){
+            return userMapper.selectUser(user);
+        }
         return null;
     }
+
 
     public User getUserByName(String uname) {
         return userMapper.getUserByName(uname);

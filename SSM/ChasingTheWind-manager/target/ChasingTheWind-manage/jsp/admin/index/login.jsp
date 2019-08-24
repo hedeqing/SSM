@@ -1,11 +1,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
-
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>后台登录</title>
+		<link rel="stylesheet" type="text/css" href="jsp/static/admin/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="jsp/static/admin/css/login.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/admin/css/login.css" />
 	</head>
@@ -15,12 +20,14 @@
 			<div class="m-login">
 				<h3>后台系统登录</h3>
 				<div class="m-login-warp">
-					<form class="layui-form">
+<%--					调用controller--%>
+					<form class="layui-form" action="<%=basePath%>/user/login" method="post">
+
 						<div class="layui-form-item">
-							<input type="text" name="title" required lay-verify="required" placeholder="号码" autocomplete="off" class="layui-input">
+							<input type="text" name="number" required lay-verify="required" placeholder="号码" autocomplete="off" class="layui-input">
 						</div>
 						<div class="layui-form-item">
-							<input type="text" name="password" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+							<input type="password" name="password" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
 						</div>
 <%--						<div class="layui-form-item">--%>
 <%--							<div class="layui-inline">--%>
@@ -44,6 +51,7 @@
 			</div>
 		</div>
 		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jsp/static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			layui.use(['form', 'layedit', 'laydate'], function() {
 				var form = layui.form(),
@@ -52,7 +60,7 @@
 
 				//自定义验证规则
 				form.verify({
-					title: function(value) {
+					number: function(value) {
 						if(value.length < 5) {
 							return '标题至少得5个字符啊';
 						}
@@ -66,7 +74,7 @@
 				//监听提交
 				form.on('submit(login)', function(data) {
 					layer.alert(JSON.stringify(data.field), {
-						title: '最终的提交信息'
+						number: '最终的提交信息'
 					})
 					return false;
 				});

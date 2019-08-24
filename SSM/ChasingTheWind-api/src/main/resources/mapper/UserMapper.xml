@@ -3,25 +3,30 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.northuniversity.mapper.UserMapper">
-    <select id="getUser" parameterType="java.util.Map" resultType="com.northuniversity.model.User">
-        SELECT *
-        FROM user
-        where id =#{param.id}
-    </select>
+<!--    <select id="getUser" parameterType="java.util.Map" resultType="com.northuniversity.model.User">-->
+<!--        SELECT *-->
+<!--        FROM user-->
+<!--        where id =#{param.id}-->
+<!--    </select>-->
     <insert id="insertUser" parameterType="java.util.Map">
         INSERT INTO user (id,name,age,sex) values(#{param.id},#{param.name},#{param.age},#{param.sex})
     </insert>
     <select id="selectAllUser" resultType="com.northuniversity.model.User">
         SELECT * FROM user
     </select>
-    <update id="update" parameterType="java.util.Map">
-        UPDATE USER  SET id=id-#{param.total},age=age+#{param.total}
-        WHERE name=#{param.name}
-    </update>
-    <select id="getUserByName" parameterType="java.lang.String" resultType="com.northuniversity.model.User">
-        SELECT * FROM USER  WHERE name=#{param}
+    <select id="selectUser" resultType="com.northuniversity.model.User">
+        select * from user
+        where number = #{param.number}
+        and password = #{param.password}
     </select>
-    <update id="updateBid" parameterType="com.northuniversity.model.User" >
-        UPDATE USER SET bid=#{param.bid} WHERE id=#{param.id}
-    </update>
+<!--    <update id="update" parameterType="java.util.Map">-->
+<!--        UPDATE USER  SET id=id-#{param.total},age=age+#{param.total}-->
+<!--        WHERE name=#{param.name}-->
+<!--    </update>-->
+<!--    <select id="getUserByName" parameterType="java.lang.String" resultType="com.northuniversity.model.User">-->
+<!--        SELECT * FROM USER  WHERE name=#{param}-->
+<!--    </select>-->
+<!--    <update id="updateBid" parameterType="com.northuniversity.model.User" >-->
+<!--        UPDATE USER SET bid=#{param.bid} WHERE id=#{param.id}-->
+<!--    </update>-->
 </mapper>

@@ -2,6 +2,7 @@ package com.ssm.controller;
 
 import com.northuniversity.model.User;
 import com.northuniversity.service.UserService;
+import com.northuniversity.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +27,7 @@ import java.util.Map;
 @RequestMapping("user")
 public class UserController {
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
     Logger log = Logger.getLogger(UserController.class);
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
@@ -68,4 +70,16 @@ public class UserController {
         return userService.update();
     }
 
+    //登录
+    @RequestMapping(value = "/login")
+    public String login(User user, HttpSession session){
+
+        if (userService.get(user) != null){
+            session.setAttribute("SESSION_USER",user);
+            return "admin/appCount/index";
+        }else {
+            return "redirect:/jsp/admin/index/login.jsp";
+        }
+
+    }
 }
