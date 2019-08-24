@@ -21,7 +21,7 @@
 				<h3>后台系统登录</h3>
 				<div class="m-login-warp">
 <%--					调用controller--%>
-					<form class="layui-form" action="<%=basePath%>/user/login" method="post">
+					<form class="layui-form" action="<%=basePath%>/admin/login" method="post">
 
 						<div class="layui-form-item">
 							<input type="text" name="number" required lay-verify="required" placeholder="号码" autocomplete="off" class="layui-input">

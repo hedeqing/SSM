@@ -11,11 +11,11 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id='" + id + '\'' +
-                ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
-                ", gender='" + gender + '\'' +
-                ", number='" + number + '\'' +
+                "id=" + id +
+                ", userName='" + userName.trim() + '\'' +
+                ", password='" + password.trim() + '\'' +
+                ", gender='" + gender.trim() + '\'' +
+                ", number='" + number.trim() + '\'' +
                 '}';
     }
 
@@ -27,40 +27,38 @@ public class User {
         this.id = id;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getUserName() {
-        return userName;
+        return userName.trim();
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.userName = userName.trim();
+    }
+
+    public String getPassword() {
+        return password.trim();
+    }
+
+    public void setPassword(String password) {
+        this.password = password.trim();
     }
 
     public String getGender() {
-        return gender;
+        return gender.trim();
     }
 
     public void setGender(String gender) {
-        this.gender = gender;
+        this.gender = gender.trim();
     }
 
     public String getNumber() {
-        return number;
+        return number.trim();
     }
 
     public void setNumber(String number) {
-        this.number = number;
+        this.number = number.trim();
     }
 
     public User() {
     }
-
-
 }

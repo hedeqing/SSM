@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.northuniversity.model.User" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2019/6/27
@@ -10,6 +10,7 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
+    System.out.println(request.getSession().getAttribute("SESSION_USER_number"));
 %>
 <div class="layui-header">
     <div class="layui-logo">后台管理</div>
@@ -19,9 +20,16 @@
     </ul>
     <ul class="layui-nav layui-layout-right">
         <li class="layui-nav-item">
-            <a href="<%=basePath%>/jsp/admin/index/admin-info.jsp">
+
+<%--            <a href="<%=basePath%>/jsp/admin/index/admin-info.jsp?id=<%=request.getSession().getAttribute("SESSION_USER_username")%>&id1=<%=%>">--%>
+            <a href="<%=basePath%>/jsp/admin/index/admin-info.jsp?id=<%=request.getSession().getAttribute("SESSION_USER_id")%>
+            &username=<%=request.getSession().getAttribute("SESSION_USER_username")%>
+<%--            &gender=<%=request.getSession().getAttribute("SESSION_USER_gender")%>--%>
+            &number=<%=request.getSession().getAttribute("SESSION_USER_number")%>
+            &password=<%=request.getSession().getAttribute("SESSION_USER_psd")%>
+">
                 <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                ${SESSION_USER.userName}
+                <%=request.getSession().getAttribute("SESSION_USER_username")%>
             </a>
         </li>
         <li class="layui-nav-item"><a href="<%=basePath%>/jsp/admin/index/login.jsp">退出登录</a></li>

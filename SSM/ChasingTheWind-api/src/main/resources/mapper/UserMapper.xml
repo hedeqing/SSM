@@ -8,16 +8,20 @@
 <!--        FROM user-->
 <!--        where id =#{param.id}-->
 <!--    </select>-->
-    <insert id="insertUser" parameterType="java.util.Map">
-        INSERT INTO user (id,name,age,sex) values(#{param.id},#{param.name},#{param.age},#{param.sex})
-    </insert>
+<!--    <insert id="insertUser" parameterType="java.util.Map">-->
+<!--        INSERT INTO user (id,name,age,sex) values(#{param.id},#{param.name},#{param.age},#{param.sex})-->
+<!--    </insert>-->
     <select id="selectAllUser" resultType="com.northuniversity.model.User">
         SELECT * FROM user
     </select>
     <select id="selectUser" resultType="com.northuniversity.model.User">
-        select * from user
+         SELECT * FROM user
         where number = #{param.number}
         and password = #{param.password}
+    </select>
+    <select id="getUserByNumber" resultType="com.northuniversity.model.User">
+         SELECT * FROM user
+        where number = #{param.number}
     </select>
 <!--    <update id="update" parameterType="java.util.Map">-->
 <!--        UPDATE USER  SET id=id-#{param.total},age=age+#{param.total}-->

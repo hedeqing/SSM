@@ -28,13 +28,10 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserServiceImpl userService;
+
+    public  static User myuser;
     Logger log = Logger.getLogger(UserController.class);
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public ModelAndView toIndex() {
-        ModelAndView mv = new ModelAndView("admin/appCount/index");
-            return mv;
-}
 
     @RequestMapping("select")
     @ResponseBody
@@ -70,16 +67,6 @@ public class UserController {
         return userService.update();
     }
 
-    //登录
-    @RequestMapping(value = "/login")
-    public String login(User user, HttpSession session){
 
-        if (userService.get(user) != null){
-            session.setAttribute("SESSION_USER",user);
-            return "admin/appCount/index";
-        }else {
-            return "redirect:/jsp/admin/index/login.jsp";
-        }
 
-    }
 }

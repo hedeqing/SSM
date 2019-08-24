@@ -1,9 +1,7 @@
 package com.northuniversity.service.base;
 
-import com.northuniversity.mapper.CarMapper;
-import com.northuniversity.mapper.ConcentrationMapper;
-import com.northuniversity.mapper.SensorMapper;
-import com.northuniversity.mapper.UserMapper;
+import com.northuniversity.mapper.*;
+import com.northuniversity.model.Admin;
 import com.northuniversity.model.Car;
 import com.northuniversity.model.Concentration;
 import com.northuniversity.model.Sensor;
@@ -19,4 +17,6 @@ public abstract  class IBaseServiceImpl<T> implements IBaseService {
     public ConcentrationMapper concentrationMapper;
     @Autowired
     public SensorMapper sensorMapper;
+    @Autowired
+    public AdminMapper adminMapper;
 }

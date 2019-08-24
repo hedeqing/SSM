@@ -48,8 +48,8 @@ public class UserServiceImpl extends IBaseServiceImpl<User> implements UserServi
     }
 
     @Override
-    public User getUser(String number) {
-        return userMapper.getUser(number);
+    public User getUserByNumber(String number) {
+        return userMapper.getUserByNumber(number);
     }
 
 

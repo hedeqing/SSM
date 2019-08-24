@@ -11,33 +11,33 @@ public class Sensor {
     @Override
     public String toString() {
         return "Sensor{" +
-                "license='" + license + '\'' +
-                ", concentrationId='" + concentrationId + '\'' +
-                ", sensorName='" + sensorName + '\'' +
+                "license='" + license.trim() + '\'' +
+                ", concentrationId='" + concentrationId.trim() + '\'' +
+                ", sensorName='" + sensorName.trim() + '\'' +
                 '}';
     }
 
     public String getLicense() {
-        return license;
+        return license.trim();
     }
 
     public void setLicense(String license) {
-        this.license = license;
+        this.license = license.trim();
     }
 
     public String getConcentrationId() {
-        return concentrationId;
+        return concentrationId.trim();
     }
 
     public void setConcentrationId(String concentrationId) {
-        this.concentrationId = concentrationId;
+        this.concentrationId = concentrationId.trim();
     }
 
     public String getSensorName() {
-        return sensorName;
+        return sensorName.trim();
     }
 
     public void setSensorName(String sensorName) {
-        this.sensorName = sensorName;
+        this.sensorName = sensorName.trim();
     }
 }

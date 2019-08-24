@@ -27,4 +27,6 @@ public interface UserMapper {
 
     void updateBid(@Param("param") User user);
     User selectUser(@Param("param") User user);
+
+    User getUserByNumber(String number);
 }
