@@ -19,7 +19,7 @@ public interface UserMapper {
 
     List<User> selectAllUser();
 
-    void update(@Param("param") Map param);
+    boolean update(@Param("param")User user);
 
     User getUserByName(@Param("param") String uname);
 
@@ -29,4 +29,9 @@ public interface UserMapper {
     User selectUser(@Param("param") User user);
 
     User getUserByNumber(String number);
+    User saveUser(@Param("param")User user);
+
+    boolean deleteByNumber(String number);
+
+    User searchByNumber(String number);
 }

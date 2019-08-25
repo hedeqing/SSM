@@ -10,7 +10,8 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
-    System.out.println(request.getSession().getAttribute("SESSION_USER_number"));
+    System.out.println(request.getSession().getAttribute("SESSION_USER_admin"));
+//    System.out.println(request.getSession().getAttribute("SESSION_USER_number"));
 %>
 <div class="layui-header">
     <div class="layui-logo">后台管理</div>
@@ -24,7 +25,7 @@
 <%--            <a href="<%=basePath%>/jsp/admin/index/admin-info.jsp?id=<%=request.getSession().getAttribute("SESSION_USER_username")%>&id1=<%=%>">--%>
             <a href="<%=basePath%>/jsp/admin/index/admin-info.jsp?id=<%=request.getSession().getAttribute("SESSION_USER_id")%>
             &username=<%=request.getSession().getAttribute("SESSION_USER_username")%>
-<%--            &gender=<%=request.getSession().getAttribute("SESSION_USER_gender")%>--%>
+            &admin=<%=request.getSession().getAttribute("SESSION_USER_admin")%>
             &number=<%=request.getSession().getAttribute("SESSION_USER_number")%>
             &password=<%=request.getSession().getAttribute("SESSION_USER_psd")%>
 ">
@@ -49,7 +50,11 @@
                     <dd><a href="<%=basePath%>/jsp/admin/table/sensor/sensor_table.jsp">传感器管理</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="<%=basePath%>/jsp/admin/index/admin-info.jsp">个人信息</a></li>
+            <li class="layui-nav-item"><a href="<%=basePath%>/jsp/admin/index/admin-info.jsp?id=<%=request.getSession().getAttribute("SESSION_USER_id")%>
+            &username=<%=request.getSession().getAttribute("SESSION_USER_username")%>
+            &admin=<%=request.getSession().getAttribute("SESSION_USER_admin")%>
+            &number=<%=request.getSession().getAttribute("SESSION_USER_number")%>
+            &password=<%=request.getSession().getAttribute("SESSION_USER_psd")%>">个人信息</a></li>
 
         </ul>
     </div>

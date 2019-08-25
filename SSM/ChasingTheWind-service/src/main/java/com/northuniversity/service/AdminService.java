@@ -15,6 +15,7 @@ public interface AdminService {
     List<Admin> selectAllAdmin();
 
     Admin update(Admin admin);
+    Admin updatePsd(Admin admin);
 
     Admin getAdminByNumber(String number);
     Admin get(Admin admin);

@@ -16,4 +16,9 @@
         UPDATE  admin set  name = #{param.name},number= #{param.number}
         where number = #{param.number}
     </select>
+    <select id="updatePsd" resultType="com.northuniversity.model.Admin">
+        UPDATE  admin set  password = #{param.password}
+        where number = #{param.number}
+    </select>
+
 </mapper>

@@ -18,11 +18,14 @@ public interface UserService {
 
      List<User> selectAllUser();
 
-     Object update();
+//     boolean update(User user);
 
      User getUserByNumber(String number);
      User get(User user);
 
      void updateBid(User user);
 
+     User saveUser(User user);
+     boolean deleteByNumber(String number);
+     User searchByNumber(String number);
 }

@@ -1,3 +1,8 @@
+<%@ page import="com.northuniversity.model.User" %>
+<%@ page import="com.northuniversity.model.Admin" %>
+<%@ page import="com.northuniversity.mapper.UserMapper" %>
+<%@ page import="com.northuniversity.mapper.AdminMapper" %>
+<%@ page import="java.util.ArrayDeque" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -6,11 +11,14 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
     String username = request.getParameter("username");
     String id = request.getParameter("id");
-//    System.out.println(id);
-
-    String gender = request.getParameter("gender");
     String number = request.getParameter("number");
+
+//    System.out.println(id);
+    String admin1 =request.getParameter("admin");
+    String gender = request.getParameter("gender");
+//    String number = request.getParameter("number");
     String password = request.getParameter("password");
+    System.out.println(admin1);
 //    System.out.println(number);
 //    System.out.println(password);
 %>
@@ -80,7 +88,7 @@
                 </form>
             </div>
             <div class="layui-tab-item">
-                <form class="layui-form" v style="width: 90%;padding-top: 20px;"   action = /admin/update_admin_psd  method="post">
+                <form class="layui-form" v style="width: 90%;padding-top: 20px;"  action ="<%=basePath%>/admin/update_admin_psd?number=<%=number%>"  method="post">
                     <div class="layui-form-item">
                         <label class="layui-form-label">姓名：</label>
                         <div class="layui-input-block">
@@ -91,21 +99,21 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">旧密码：</label>
                         <div class="layui-input-block">
-                            <input type="password" name="password1" required lay-verify="required" placeholder="请输入旧密码"
+                            <input type="password" name="old_password" required lay-verify="required" placeholder="请输入旧密码"
                                    autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">新密码：</label>
                         <div class="layui-input-block">
-                            <input type="password" name="password2" required lay-verify="required" placeholder="请输入新密码"
+                            <input type="password" name="new_password" required lay-verify="required" placeholder="请输入新密码"
                                    autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label">重复密码：</label>
                         <div class="layui-input-block">
-                            <input type="password" name="password3" required lay-verify="required" placeholder="请再输入新密码"
+                            <input type="password" name="repeat_password" required lay-verify="required" placeholder="请再输入新密码"
                                    autocomplete="off" class="layui-input">
                         </div>
                     </div>
@@ -129,24 +137,6 @@
             //监听信息提交
             form.on('submit(adminInfo)', function (data) {
                 // layer.msg(JSON.stringify(data.field));
-                $("#save-btn").on("click",function(){
-                    $.ajax({
-                        type: 'post',
-                        data: $('#form').serialize(),
-                        url: '<%=basePath%>/admin/update_admin_info',
-                        cache:false,
-                        dataType:'text',
-                        success: function (data) {
-                            if("fail"!=data){
-                                layer.msg('修改成功');
-                                <%--window.location.href = "${ctx}/user/userList?userId="+data;--%>
-                            }else{
-                                layer.msg('修改失败');
-                            }
-                        }
-                    })
-
-
                 form.render();
                 layer.msg("修改成功")
             return false;

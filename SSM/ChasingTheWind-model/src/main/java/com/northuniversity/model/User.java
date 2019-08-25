@@ -12,10 +12,10 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", userName='" + userName.trim() + '\'' +
-                ", password='" + password.trim() + '\'' +
-                ", gender='" + gender.trim() + '\'' +
-                ", number='" + number.trim() + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", gender='" + gender + '\'' +
+                ", number='" + number + '\'' +
                 '}';
     }
 

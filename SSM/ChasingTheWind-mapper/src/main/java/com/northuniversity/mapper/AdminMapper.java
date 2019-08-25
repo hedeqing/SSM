@@ -8,6 +8,7 @@ public interface AdminMapper {
     Admin selectAdmin(@Param("param") Admin admin);
 
     Admin getAdminByNumber(String number);
-    Admin selectUser(@Param("param") Admin admin);
+//    Admin selectAd(@Param("param") Admin admin);
     Admin update(@Param("param")Admin admin);
+    Admin updatePsd(@Param("param")Admin admin);
 }

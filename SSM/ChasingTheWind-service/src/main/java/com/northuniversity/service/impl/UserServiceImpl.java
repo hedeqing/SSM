@@ -39,14 +39,6 @@ public class UserServiceImpl extends IBaseServiceImpl<User> implements UserServi
     }
 
 
-    public Object update() {
-        Map param = new HashMap();
-        param.put("total",10);
-        param.put("name","测试2");
-        userMapper.update(param);
-        return "OK";
-    }
-
     @Override
     public User getUserByNumber(String number) {
         return userMapper.getUserByNumber(number);
@@ -71,9 +63,29 @@ public class UserServiceImpl extends IBaseServiceImpl<User> implements UserServi
     public void updateBid(User user) {
         userMapper.updateBid(user);
     }
+
+    @Override
+    public User saveUser(User user) {
+        return userMapper.saveUser(user);
+    }
+
+    @Override
+    public boolean deleteByNumber(String number) {
+        return userMapper.deleteByNumber(number);
+    }
+
+    @Override
+    public User searchByNumber(String number) {
+        return userMapper.searchByNumber(number);
+    }
+
+    public boolean update(User user) {
+        return userMapper.update(user);
+    }
+
     @Override
     public Object update(Object o) {
-        return null;
+        return userMapper.update((User)o);
     }
 
     @Override

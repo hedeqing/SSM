@@ -1,7 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
-
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
+%>
 <head>
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit">
@@ -15,11 +18,11 @@
 
 <body>
 <div class="page-content-wrap">
-    <form class="layui-form">
+    <form class="layui-form" action="<%=basePath%>/user/addUser" method="post">
         <div class="layui-tab" style="margin: 0;">
             <ul class="layui-tab-title">
                 <%--				<li><a href="article-list.html">文章列表</a></li>--%>
-                <li class="layui-this">文章详情</li>
+                <li class="layui-this">用户详情</li>
 
             </ul>
             <div class="layui-tab-content">
@@ -28,7 +31,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label">用户名：</label>
                         <div class="layui-input-block">
-                            <input type="text" name="name" required lay-verify="required" placeholder="请输入用户"
+                            <input type="text" name="userName" required lay-verify="required" placeholder="请输入用户名"
                                    autocomplete="off" class="layui-input">
                         </div>
                     </div>
@@ -36,23 +39,23 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">性别：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="laiyuan" placeholder="请输入关键字" autocomplete="off" class="layui-input">
+                        <input type="text" name="gender" placeholder="请输入性别" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">号码：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="laiyuan" required lay-verify="required" placeholder="请输入文章来源"
+                        <input type="text" name="number" required lay-verify="required" placeholder="请输入号码"
                                autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">车牌：</label>
+                    <label class="layui-form-label">密码：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="listorder" required lay-verify="required" placeholder="请输入排序"
+                        <input type="text" name="password" required lay-verify="required" placeholder="密码"
                                autocomplete="off" class="layui-input" value="">
                     </div>
-                </div>
+<%--                </div>--%>
             </div>
         </div>
 </div>

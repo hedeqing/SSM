@@ -32,7 +32,7 @@
 
 
         <div class="demoTable">
-            搜索ID：
+            搜索号码：
             <div class="layui-inline">
                 <input class="layui-input" name="id" id="demoReload" autocomplete="off">
             </div>
@@ -82,6 +82,7 @@
         table.render({
             elem: '#demo'
             , height: 420
+            // , url: 'http://localhost:8080/user/search?number=123456' //数据接口
             , url: 'http://localhost:8080/user/selectAllUser' //数据接口
             , title: '用户表'
             , id: 'testReload'
@@ -92,10 +93,10 @@
             , cols: [[ //表头
                 {type: 'checkbox', fixed: 'left'}
                 , {field: 'id', title: 'ID', sort: true, fixed: 'left'}
-                , {field: 'userName', title: '姓名'}
+                , {field: 'userName', title: '姓名',edit:"text"}
                 , {field: 'gender', title: '性别', sort: true, edit: 'text'}
-                , {field: 'number', title: '号码', sort: true, edit: 'text'}
-                , {field: 'password', title: '密码', sort: true}
+                , {field: 'number', title: '号码', sort: true}
+                , {field: 'password', title: '密码', sort: true,edit:"password"}
                 , {fixed: 'right', width: 165, align: 'center', toolbar: '#barDemo'}
             ]]
         });
@@ -110,7 +111,7 @@
                         title : '添加用户',
                         type : 2,
                         area: ['500px', '500px'],
-                        content : 'http://localhost:8080/user/addUser',//这是 URL，直接发送的这个请求controller会接受到并返回userList页面。也就是弹出来的页面
+                        content : 'http://localhost:8080/user/addUserJsp',//这是 URL，直接发送的这个请求controller会接受到并返回userList页面。也就是弹出来的页面
                         // btn : ['确定'] ,
                         yes : function(index , layero){
                             layer.close(index);
@@ -150,7 +151,7 @@
                     //向服务端发送删除指令
 
                     $.ajax({
-                        url: '${ctx}/user/delete/',
+                        url: '<%=basePath%>/user/delete/',
                         type: 'post',
                         data: data,
                         success: function (data) {
@@ -160,18 +161,16 @@
                     });
                 });
             } else if (layEvent === 'edit') {
-
                 $.ajax({
-                    url: '${ctx}/user/update',
+                    url: '<%=basePath%>/user/update',
                     type: 'post',
                     data: data,
-                    success: function (data1) {
-                        if (data1 == '1') {
+                    success: function (data) {
+                        if (data == '1') {
                             layer.msg('编辑成功');
                         } else {
                             layer.msg('编辑失败');
                         }
-
                     }
                 })
 
@@ -179,28 +178,33 @@
         });
         var $ = layui.$, active = {
             reload: function () {
-                var textdemo = $('#demoReload').val();
-                table.reload('textreload', {
-                    url: 'http://localhost:8080/user/search',
-                    method: 'get',
+                var number = $('#demoReload').val();//获取搜索框里面的内容
+                var  index = layer.msg("查询中，请稍后",{icon: 16,time :false,shade:0})
+                table.reload('testReload', {
+                    url: '<%=basePath%>/user/search?number='+number,
+                    method: 'post',
                     page: {
                         curr: 1 //重新从第 1 页开始
                     },
-                    where: {
-                        key: textdemo
-
-                    }
+                    // where: {
+                    //     number: number
+                    // }
                 })
-
+                layer.close(index)
             }
         }
-        $('.chu .layui-btn').on('click', function () {
+        // $('.chu .layui-btn').on('click', function () {
+        //     var type = $(this).data('type');
+        //
+        //     if ($('#textdemo').val() == "") {
+        //         layer.msg('查询项目不能为空');
+        //         return false;
+        //     }
+        //     active[type] ? active[type].call(this) : '';
+        // });
+        //绑定搜索框，点击事件
+        $('.demoTable .layui-btn').on('click', function(){
             var type = $(this).data('type');
-
-            if ($('#textdemo').val() == "") {
-                layer.msg('查询项目不能为空');
-                return false;
-            }
             active[type] ? active[type].call(this) : '';
         });
         //执行一个轮播实例

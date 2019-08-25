@@ -41,6 +41,10 @@ public class AdminServiceImpl extends IBaseServiceImpl<Admin> implements AdminSe
         return adminMapper.update(admin);
     }
 
+    @Override
+    public Admin updatePsd(Admin admin) {
+        return adminMapper.updatePsd(admin);
+    }
 
 
     @Override
