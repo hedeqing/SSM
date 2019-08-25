@@ -1,16 +1,12 @@
 package com.ssm.controller;
 
 import com.northuniversity.model.User;
-import com.northuniversity.service.UserService;
 import com.northuniversity.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 
 import javax.servlet.ServletException;
@@ -90,6 +86,7 @@ public class UserController {
     @RequestMapping("update")
     @ResponseBody
     public String update(User user) {
+
         if (userService.update(user)){
             System.out.println("update");
             return "1";
@@ -117,23 +114,6 @@ public class UserController {
         map.put("data",null);
         return map;
     }
-//    @RequestMapping("search")
-//    @ResponseBody
-//    public Map<String,Object> search(User user){
-//        Map<String,Object> map = new HashMap<>();
-//        String msg = "";
-//        User user_find = null;
-//        try {
-//             user_find =userService.searchByNumber(user.getNumber());
-//        } finally {
-//
-//        }
-//        map.put("code",0);
-//        map.put("msg",msg);
-//        map.put("count",1);
-//        map.put("data",user_find);
-//        return  map;
-//    }
 
     @RequestMapping("search")
     @ResponseBody
@@ -146,6 +126,7 @@ public class UserController {
 //        System.out.println(request.getParameter("number"));
         user_find = userService.searchByNumber(user.getNumber());
         List<User> users =new ArrayList<>();
+        //注意，data需要是list类型，不然无法正确渲染数据
         users.add(user_find);
         System.out.println(user_find);
         map.put("code", 0);

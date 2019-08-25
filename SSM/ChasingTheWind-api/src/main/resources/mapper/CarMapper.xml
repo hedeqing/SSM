@@ -6,4 +6,25 @@
     <select id="selectAllCar" resultType="com.northuniversity.model.Car">
         SELECT * FROM car
     </select>
+
+<!--   注意，model后面不能有空格，否则是被不出来 /-->
+    <select id="saveCar" resultType="com.northuniversity.model.Car">
+        INSERT INTO car (number, license) values(#{param.number},#{param.license})
+    </select>
+    <select id="deleteByLicense" resultType="com.northuniversity.model.Car">
+        delete from car where license=#{license}
+
+    </select>
+    <select id="searchByLicense" resultType="com.northuniversity.model.Car">
+        select * from car  where license like #{license}
+    </select>
+    <select id="update" resultType="com.northuniversity.model.User">
+        update car
+        <set>
+            <if test="param.license != null">
+                license = #{param.license},
+            </if>
+        </set>
+        where id = #{param.id}
+    </select>
 </mapper>

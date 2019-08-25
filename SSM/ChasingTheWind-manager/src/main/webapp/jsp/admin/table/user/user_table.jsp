@@ -95,7 +95,7 @@
                 , {field: 'id', title: 'ID', sort: true, fixed: 'left'}
                 , {field: 'userName', title: '姓名',edit:"text"}
                 , {field: 'gender', title: '性别', sort: true, edit: 'text'}
-                , {field: 'number', title: '号码', sort: true}
+                , {field: 'number', title: '号码', sort: true,edit:"text"}
                 , {field: 'password', title: '密码', sort: true,edit:"password"}
                 , {fixed: 'right', width: 165, align: 'center', toolbar: '#barDemo'}
             ]]

@@ -35,14 +35,14 @@
             <if test="param.gender != null">
                 gender = #{param.gender},
             </if>
-<!--            <if test="number != null">-->
-<!--                number= #{param.number},-->
-<!--            </if>-->
+              <if test="param.number != null">
+                number = #{param.number},
+            </if>
             <if test="param.password != null">
                 password = #{param.password}
             </if>
         </set>
-        where number = #{param.number}
+        where id = #{param.id}
     </select>
 
 </mapper>

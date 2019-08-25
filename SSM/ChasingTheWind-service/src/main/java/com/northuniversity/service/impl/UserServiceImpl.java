@@ -5,6 +5,7 @@ import com.northuniversity.service.UserService;
 import com.northuniversity.service.base.IBaseServiceImpl;
 import org.springframework.stereotype.Service;
 
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,26 +24,12 @@ public class UserServiceImpl extends IBaseServiceImpl<User> implements UserServi
         return  userMapper.getUser(map);
     }
 
-    @Override
-    public void insertUser(String uName, String uPassword, int uGender, String uNumber, String uAvator) {
-        Map param = new HashMap();
-        param.put("userName",uName);
-        param.put("password",uPassword);
-        param.put("gender",uGender);
-        param.put("number",uNumber);
-        userMapper.insertUser(param);
-    }
 
     @Override
     public List<User> selectAllUser() {
         return userMapper.selectAllUser();
     }
 
-
-    @Override
-    public User getUserByNumber(String number) {
-        return userMapper.getUserByNumber(number);
-    }
 
 
     @Override
@@ -92,4 +79,5 @@ public class UserServiceImpl extends IBaseServiceImpl<User> implements UserServi
     public Object insert(Object o) {
         return null;
     }
+
 }
