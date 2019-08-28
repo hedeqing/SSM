@@ -1,9 +1,62 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<%@ page contentType="text/html; charset=gb2312" %>--%>
+<%@ page language="java" %>
+<%@ page import="com.mysql.jdbc.Driver" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.Date " %>
+<%@ page import="com.northuniversity.model.User" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <!DOCTYPE html>
 <html>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
+    String driverName = "com.mysql.jdbc.Driver";
+//数据库信息
+    String userName = "root";
+//密码
+    String userPasswd = "123456";
+//数据库名
+    String dbName = "co_detection_system";
+//表名
+//将数据库信息字符串连接成为一个完整的url（也可以直接写成url，分开写是明了可维护性强）
+    int userCount = 0;
+    int carCount = 0;
+    int sensorCount = 0;
+    Connection con = null;
+    Date now = new Date();
+    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//可以方便地修改日期格式
+    String time = dateFormat.format( now );
+
+    PreparedStatement ps = null;
+    ResultSet rs = null;
+    String url = "jdbc:mysql://localhost/" + dbName + "?user=" + userName + "&password=" + userPasswd;
+    Class.forName("com.mysql.jdbc.Driver").newInstance();
+//    Connection conn=DriverManager.getConnection(url);
+//    Statement stmt = conn.createStatement();
+    String sql = "SELECT COUNT(*) FROM user";
+    String sql1 = "SELECT COUNT(*) FROM sensor";
+    String sql2 = "SELECT COUNT(*) FROM car";
+    con = DriverManager.getConnection(url);
+    ps = con.prepareStatement(sql);
+    rs = ps.executeQuery();
+    if (rs.next()) {
+        userCount = rs.getInt(1);
+    }
+    con = DriverManager.getConnection(url);
+    ps = con.prepareStatement(sql1);
+    rs = ps.executeQuery();
+    if (rs.next()) {
+        carCount = rs.getInt(1);
+    }
+    con = DriverManager.getConnection(url);
+    ps = con.prepareStatement(sql2);
+    rs = ps.executeQuery();
+    if (rs.next()) {
+        sensorCount = rs.getInt(1);
+    }
+    con.close();
+
 %>
 <meta charset="utf-8">
 <head style="margin-top: 0px">
@@ -30,7 +83,7 @@
                             </div>
                             <div class="right-text-con">
                                 <p class="name">会员数</p>
-                                <p><span class="color-org">89</span>数据<span class="iconfont">&#xe628;</span></p>
+                                <p><span class="color-org"><%=userCount%></span>数据<span class="iconfont">&#xe628;</span></p>
                             </div>
                         </a>
                     </li>
@@ -41,7 +94,7 @@
                             </div>
                             <div class="right-text-con">
                                 <p class="name">车辆数</p>
-                                <p><span class="color-blue">189</span>数据<span class="iconfont">&#xe628;</span></p>
+                                <p><span class="color-blue"><%=carCount%></span>数据<span class="iconfont">&#xe628;</span></p>
                             </div>
                         </a>
                     </li>
@@ -52,7 +105,7 @@
                             </div>
                             <div class="right-text-con">
                                 <p class="name">传感器数</p>
-                                <p><span class="color-green">221</span>数据<span class="iconfont">&#xe60f;</span></p>
+                                <p><span class="color-green"><%=sensorCount%></span>数据<span class="iconfont">&#xe628;</span></p>
                             </div>
                         </a>
                     </li>
@@ -91,7 +144,7 @@
                 <div class="panel-body clearfix">
                     <div class="col-md-2">
                         <p class="title">服务器环境</p>
-                        <span class="info">Apache/2.4.4 (Win32) PHP/5.4.16</span>
+                        <span class="info">Tomcat 8.6.43 (Win64)</span>
                     </div>
                     <div class="col-md-2">
                         <p class="title">服务器IP地址</p>
@@ -101,17 +154,17 @@
                         <p class="title">服务器域名</p>
                         <span class="info">localhost </span>
                     </div>
-                    <div class="col-md-2">
-                        <p class="title"> PHP版本</p>
-                        <span class="info">5.4.16</span>
-                    </div>
+<%--                    <div class="col-md-2">--%>
+<%--                        <p class="title"> PHP版本</p>--%>
+<%--                        <span class="info">5.4.16</span>--%>
+<%--                    </div>--%>
                     <div class="col-md-2">
                         <p class="title">数据库信息</p>
-                        <span class="info">5.6.12-log </span>
+                        <span class="info">8.0 </span>
                     </div>
                     <div class="col-md-2">
                         <p class="title">服务器当前时间</p>
-                        <span class="info">2016-06-22 11:37:35</span>
+                        <span class="info"><%=time%></span>
                     </div>
                 </div>
             </div>
@@ -155,7 +208,7 @@
                 myChart = ec.init(document.getElementById('chart'));
                 myChart.setOption({
                     title: {
-                        text: '折线图堆叠'
+                        text: 'CO浓度折线图'
                     },
                     tooltip: {
                         trigger: 'axis'
@@ -183,7 +236,6 @@
                     yAxis: {
                         type: 'value'
                     },
-                    // series:[]
                     series: [
                         {
                             name: '传感器一',
@@ -198,23 +250,11 @@
                             data: [220, 182, 191, 234, 290, 330, 310]
                         },
                         {
-                            name:'传感器三',
-                            type:'line',
+                            name: '传感器三',
+                            type: 'line',
                             stack: '总量',
-                            data:[150, 232, 201, 154, 190, 330, 410]
+                            data: [150, 232, 201, 154, 190, 330, 410]
                         },
-                        // {
-                        //     name:'直接访问',
-                        //     type:'line',
-                        //     stack: '总量',
-                        //     data:[320, 332, 301, 334, 390, 330, 320]
-                        // },
-                        // {
-                        //     name:'搜索引擎',
-                        //     type:'line',
-                        //     stack: '总量',
-                        //     data:[820, 932, 901, 934, 1290, 1330, 1320]
-                        // }
                     ]
                 });
 
@@ -260,11 +300,11 @@
                             type: 'line',
                             stack: '总量',
                             data: [220, 182, 191, 234, 290, 330, 310]
-                        },       {
+                        }, {
                             name: '传感器三',
                             type: 'line',
                             stack: '总量',
-                            data: [220, 182, 191, 234, 290, 330, 310]
+                            data: [0, 0, 0, 0, 0, 0]
                         },
 
                     ]

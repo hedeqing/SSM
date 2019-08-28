@@ -7,55 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d52cbd6-77c6-4f98-a176-20a4f6acb378" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ChasingTheWind_manager_war2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/static/plugins/layuiadmin/laydate/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/static/plugins/layuiadmin/laydate/theme/default/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/static/plugins/layuiadmin/laydate/theme/default/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/static/plugins/layuiadmin/laydate/theme/default/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/static/plugins/layuiadmin/laydate/theme/default/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/static/plugins/layuiadmin/laydate/theme/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/EchartsModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-api/src/main/resources/mapper/ConcentrationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-api/src/main/resources/mapper/ConcentrationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-api/src/main/resources/mapper/SensorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-api/src/main/resources/mapper/SensorMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-api/target/classes/mapper/ConcentrationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-api/target/classes/mapper/ConcentrationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-api/target/classes/mapper/SensorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-api/target/classes/mapper/SensorMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/AndroidController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/AndroidController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/SensorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/SensorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/admin/index/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/admin/index/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/admin/table/sensor/sensor_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/admin/table/sensor/sensor_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/admin/table/sensor/sensor_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/admin/table/sensor/sensor_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/classes/com/ssm/controller/AndroidController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/classes/com/ssm/controller/AndroidController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/classes/com/ssm/controller/SensorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/classes/com/ssm/controller/SensorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-model-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/WEB-INF/lib/ChasingTheWind-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/jsp/admin/index/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/jsp/admin/index/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/jsp/admin/table/sensor/sensor_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/jsp/admin/table/sensor/sensor_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/jsp/admin/table/sensor/sensor_table.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/ChasingTheWind-manage/jsp/admin/table/sensor/sensor_table.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/classes/com/ssm/controller/AndroidController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/classes/com/ssm/controller/AndroidController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/classes/com/ssm/controller/SensorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-manager/target/classes/com/ssm/controller/SensorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/src/main/java/com/northuniversity/mapper/ConcentrationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/src/main/java/com/northuniversity/mapper/ConcentrationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/src/main/java/com/northuniversity/mapper/SensorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/src/main/java/com/northuniversity/mapper/SensorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/src/main/java/com/northuniversity/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/src/main/java/com/northuniversity/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/target/classes/com/northuniversity/mapper/ConcentrationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/target/classes/com/northuniversity/mapper/ConcentrationMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/target/classes/com/northuniversity/mapper/SensorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/target/classes/com/northuniversity/mapper/SensorMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/target/classes/com/northuniversity/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-mapper/target/classes/com/northuniversity/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Concentration.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Concentration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/Sensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-model/target/classes/com/northuniversity/model/Concentration.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/target/classes/com/northuniversity/model/Concentration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-model/target/classes/com/northuniversity/model/Sensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-model/target/classes/com/northuniversity/model/Sensor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/ConcentrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/ConcentrationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/SensorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/SensorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/impl/ConcentrationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/impl/ConcentrationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/impl/SensorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/impl/SensorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/src/main/java/com/northuniversity/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/ConcentrationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/ConcentrationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/SensorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/SensorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/impl/ConcentrationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/impl/ConcentrationServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/impl/SensorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/impl/SensorServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/SSM/ChasingTheWind-service/target/classes/com/northuniversity/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/SSM/target/" />
@@ -110,35 +63,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/java/com/ssm/controller/AndroidController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="99" selection-start-line="99" selection-end-line="99" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-model/src/main/java/com/northuniversity/model/EchartsModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding>
-                <element signature="e#229#230#0" expanded="true" />
-                <element signature="e#257#258#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-                <element signature="e#333#334#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/admin/index/welcome.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="263" column="38" selection-start-line="263" selection-start-column="38" selection-end-line="263" selection-end-column="38" />
+            <state relative-caret-position="172">
+              <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -372,8 +301,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-138" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-1846" />
+    <option name="y" value="117" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -1016,12 +946,12 @@
       <workItem from="1566695121948" duration="26716000" />
       <workItem from="1566736681916" duration="3799000" />
       <workItem from="1566868220883" duration="20548000" />
-      <workItem from="1566952871455" duration="21595000" />
+      <workItem from="1566952871455" duration="23955000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172996000" />
+    <option name="totallyTimeSpent" value="175356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1033,7 +963,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="57" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.496337" visible="true" weight="0.28411514" />
@@ -1521,8 +1451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SSM/ChasingTheWind-manager/src/main/webapp/jsp/admin/index/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="263" column="38" selection-start-line="263" selection-start-column="38" selection-end-line="263" selection-end-column="38" />
+        <state relative-caret-position="172">
+          <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
         </state>
       </provider>
     </entry>
