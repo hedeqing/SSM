@@ -25,4 +25,16 @@ public class ConcentrationServiceImpl extends IBaseServiceImpl<Concentration> im
     public List<Concentration> selectAllConcentration() {
         return concentrationMapper.selectAllConcentration();
     }
+
+    @Override
+    public List<Concentration> searchByConcentrationIdAndDate(Concentration concentration) {
+        return concentrationMapper.searchByConcentrationIdAndDate(concentration);
+    }
+
+    @Override
+    public boolean findByConcentrationIdAndDate(Concentration concentration) {
+        return concentrationMapper.findByConcentrationIdAndDate(concentration);
+    }
+
+
 }

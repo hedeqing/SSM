@@ -9,5 +9,6 @@ import java.util.Map;
 public interface ConcentrationMapper {
 
     List<Concentration> selectAllConcentration();
-
+    List<Concentration> searchByConcentrationIdAndDate(@Param("param") Concentration concentration);
+    boolean findByConcentrationIdAndDate(@Param("param") Concentration concentration);
 }

@@ -15,23 +15,24 @@ import java.util.Map;
 public interface UserMapper {
     List<User> getUser(@Param("param") Map map);
 
-    void insertUser(@Param("param") Map param);
 
-    List<User> selectAllUser();
-
-    boolean update(@Param("param")User user);
-
-    User getUserByName(@Param("param") String uname);
-
-    User getUser(@Param("param") String Number);
-
-    void updateBid(@Param("param") User user);
+//    User getUser(@Param("param") String Number);
+//    User getUserByNumber(String number);
+//    void insertUser(@Param("param") Map param);
+//    void updateBid(@Param("param") User user);
+//User getUserByName(@Param("param") String uname);
     User selectUser(@Param("param") User user);
 
-    User getUserByNumber(String number);
+
     User saveUser(@Param("param")User user);
 
     boolean deleteByNumber(String number);
 
     User searchByNumber(String number);
+
+    List<User> selectAllUser();
+
+    boolean update(@Param("param")User user);
+
+
 }

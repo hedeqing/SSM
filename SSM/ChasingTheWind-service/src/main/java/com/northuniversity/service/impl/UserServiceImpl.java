@@ -41,16 +41,13 @@ public class UserServiceImpl extends IBaseServiceImpl<User> implements UserServi
         }
         return null;
     }
+//    public User getUserByName(String uname) {
+//        return userMapper.getUserByName(uname);
+//    }
 
-
-    public User getUserByName(String uname) {
-        return userMapper.getUserByName(uname);
-    }
-
-    public void updateBid(User user) {
-        userMapper.updateBid(user);
-    }
-
+//    public void updateBid(User user) {
+//        userMapper.updateBid(user);
+//    }
     @Override
     public User saveUser(User user) {
         return userMapper.saveUser(user);
@@ -79,5 +76,4 @@ public class UserServiceImpl extends IBaseServiceImpl<User> implements UserServi
     public Object insert(Object o) {
         return null;
     }
-
 }

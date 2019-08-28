@@ -6,4 +6,18 @@
     <select id="selectAllConcentration" resultType="com.northuniversity.model.Concentration">
         SELECT * FROM concentration
     </select>
+<!--    <select id="searchByConcentrationIdAndDate" resultType="com.northuniversity.model.Concentration">-->
+<!--        SELECT * FROM concentration-->
+<!--        where date like #{date}-->
+<!--    </select>-->
+    <select id="searchByConcentrationIdAndDate"  resultType="com.northuniversity.model.Concentration">
+                SELECT * FROM concentration
+                where concentrationid = #{param.concentrationId}
+                and date=#{param.date}
+    </select>
+    <select id="findByConcentrationIdAndDate"  resultType="com.northuniversity.model.Concentration">
+                SELECT * FROM concentration
+                where concentrationid = #{param.concentrationId}
+                and date=#{param.date}
+    </select>
 </mapper>

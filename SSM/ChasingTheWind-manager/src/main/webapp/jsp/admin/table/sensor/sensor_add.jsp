@@ -18,43 +18,44 @@
 
 <body>
 <div class="page-content-wrap">
-    <form class="layui-form" action="<%=basePath%>/car/car_add" method="post">
+    <form class="layui-form" action="<%=basePath%>/sensor/addSensor" method="post">
         <div class="layui-tab" style="margin: 0;">
             <ul class="layui-tab-title">
                 <%--				<li><a href="article-list.html">文章列表</a></li>--%>
-                <li class="layui-this">车辆详情</li>
+                <li class="layui-this">传感器详情</li>
 
             </ul>
-<%--            <div class="layui-tab-content">--%>
-<%--                <div class="layui-tab-item"></div>--%>
-<%--                <div class="layui-tab-item layui-show">--%>
-<%--                    <div class="layui-form-item">--%>
-<%--                        <label class="layui-form-label">用户名：</label>--%>
-<%--                        <div class="layui-input-block">--%>
-<%--                            <input type="text" name="userName" required lay-verify="required" placeholder="请输入用户名"--%>
-<%--                                   autocomplete="off" class="layui-input">--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--                <div class="layui-form-item">--%>
-<%--                    <label class="layui-form-label">性别：</label>--%>
-<%--                    <div class="layui-input-block">--%>
-<%--                        <input type="text" name="gender" placeholder="请输入性别" autocomplete="off" class="layui-input">--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">号码：</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="number" required lay-verify="required" placeholder="请输入号码"
-                               autocomplete="off" class="layui-input">
+            <div class="layui-tab-content">
+                <div class="layui-tab-item"></div>
+                <div class="layui-tab-item layui-show">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">车牌：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="license" required lay-verify="required" placeholder="请输入车牌"
+                                   autocomplete="off" class="layui-input">
+                        </div>
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">车牌号：</label>
+                    <label class="layui-form-label">浓度ID：</label>
                     <div class="layui-input-block">
-                        <input type="text" name="license" required lay-verify="required" placeholder="车牌号"
-                               autocomplete="off" class="layui-input" value="">
+                        <input type="text" name="concentrationId" placeholder="请输入浓度ID" autocomplete="off" class="layui-input">
                     </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">传感器名：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="sensorName" required lay-verify="required" placeholder="请输入传感器名字"
+                               autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+<%--                <div class="layui-form-item">--%>
+<%--                    <label class="layui-form-label">车牌号：</label>--%>
+<%--                    <div class="layui-input-block">--%>
+<%--                        <input type="text" name="license" required lay-verify="required" placeholder="车牌号"--%>
+<%--                               autocomplete="off" class="layui-input" value="">--%>
+<%--                    </div>--%>
                     <%--                </div>--%>
                 </div>
             </div>

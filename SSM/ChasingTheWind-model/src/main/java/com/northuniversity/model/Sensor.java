@@ -1,20 +1,31 @@
 package com.northuniversity.model;
 
 public class Sensor {
+    private int id;
+
+    @Override
+    public String toString() {
+        return "Sensor{" +
+                "id=" + id +
+                ", license='" + license + '\'' +
+                ", concentrationId='" + concentrationId + '\'' +
+                ", sensorName='" + sensorName + '\'' +
+                '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     private  String license;
     private  String concentrationId;
     private  String sensorName;
 
     public Sensor() {
-    }
-
-    @Override
-    public String toString() {
-        return "Sensor{" +
-                "license='" + license.trim() + '\'' +
-                ", concentrationId='" + concentrationId.trim() + '\'' +
-                ", sensorName='" + sensorName.trim() + '\'' +
-                '}';
     }
 
     public String getLicense() {

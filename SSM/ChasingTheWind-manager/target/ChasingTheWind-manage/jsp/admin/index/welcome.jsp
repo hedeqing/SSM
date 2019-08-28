@@ -3,7 +3,7 @@
 <html>
 <%
     String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 %>
 <meta charset="utf-8">
 <head style="margin-top: 0px">
@@ -16,13 +16,11 @@
     <link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
 </head>
-<body  class="layui-layout-body" >
-<%--<div class="wrap-container welcome-container">--%>
-
-    <div class="layui-layout layui-layout-admin">
-        <jsp:include page="/jsp/admin/common/header.jsp"></jsp:include>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <jsp:include page="/jsp/admin/common/header.jsp"></jsp:include>
     <div class="row">
-        <div class="welcome-left-container col-lg-9" style="margin-left: 190px;margin-top: 5px" >
+        <div class="welcome-left-container col-lg-9" style="margin-left: 190px;margin-top: 5px">
             <div class="data-show">
                 <ul class="clearfix">
                     <li class="col-sm-12 col-md-4 col-xs-12">
@@ -65,64 +63,26 @@
             <div class="chart-panel panel panel-default">
                 <form class="layui-form" action="">
                     <div class="layui-form-item">
-                        <label class="layui-form-label">选择对象</label>
-                        <p></p>
-                        <div class="layui-input-inline"  lay-filter="user">
-                            <select name="user" lay-verify="required" lay-search="">
-                                <option value="">直接选择或搜索</option>
-                                <option value="1">layer</option>
-                                <option value="2">form</option>
-                                <option value="3">layim</option>
-                                <option value="4">element</option>
-                                <option value="5">laytpl</option>
-                                <option value="6">upload</option>
-                                <option value="7">laydate</option>
-                                <option value="8">laypage</option>
-                                <option value="9">flow</option>
-                                <option value="10">util</option>
-                                <option value="11">code</option>
-                                <option value="12">tree</option>
-                                <option value="13">layedit</option>
-                                <option value="14">nav</option>
-                                <option value="15">tab</option>
-                                <option value="16">table</option>
-                                <option value="17">select</option>
-                                <option value="18">checkbox</option>
-                                <option value="19">switch</option>
-                                <option value="20">radio</option>
-                            </select>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">请选择车辆</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="license" class="layui-input" id="license"
+                                       placeholder="粤g: 8888">
+                            </div>
                         </div>
-                        <div class="layui-input-inline" lay-filter="car">
-                            <select name="car" lay-verify="required" lay-search="">
-                                <option value="">直接选择或搜索车辆</option>
-                                <option value="1">layer</option>
-                                <option value="2">form</option>
-                                <option value="3">layim</option>
-                                <option value="4">element</option>
-                                <option value="5">laytpl</option>
-                                <option value="6">upload</option>
-                                <option value="7">laydate</option>
-                                <option value="8">laypage</option>
-                                <option value="9">flow</option>
-                                <option value="10">util</option>
-                                <option value="11">code</option>
-                                <option value="12">tree</option>
-                                <option value="13">layedit</option>
-                                <option value="14">nav</option>
-                                <option value="15">tab</option>
-                                <option value="16">table</option>
-                                <option value="17">select</option>
-                                <option value="18">checkbox</option>
-                                <option value="19">switch</option>
-                                <option value="20">radio</option>
-                            </select>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">请选择日期</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="date" class="layui-input" id="date" placeholder="20190812">
+                            </div>
                         </div>
-                        <div>
-                            <button type="button" class="layui-btn layui-btn-normal">提交</button>
+
+                        <div style="margin-left: 670px;margin-top: 0px">
+                            <button id="show" type="button" class="layui-btn layui-btn-normal">可视化</button>
                         </div>
                     </div>
                 </form>
-                <div class="panel-body" id="chart" style="height: 376px;">
+                <div class="panel-body" id="chart" style="height: 376px; margin-left: 5px">
                 </div>
             </div>
             <!--服务器信息-->
@@ -169,10 +129,12 @@
 </div>
 <script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../static/admin/lib/echarts/echarts.js"></script>
+
 <script type="text/javascript">
-    layui.use(['layer', 'jquery'], function () {
+    layui.use(['layer', 'jquery', 'laydate',], function () {
         var layer = layui.layer;
         var $ = layui.jquery;
+        var laydate = layer.laydate;
         //图表
         var myChart;
         require.config({
@@ -188,120 +150,172 @@
                 'echarts/chart/map'
             ],
             function (ec) {
+
                 //--- 折柱 ---
                 myChart = ec.init(document.getElementById('chart'));
-                myChart.setOption(
-                    {
-                        title: {
-                            text: "数据统计",
-                            textStyle: {
-                                color: "rgb(85, 85, 85)",
-                                fontSize: 18,
-                                fontStyle: "normal",
-                                fontWeight: "normal"
-                            }
+                myChart.setOption({
+                    title: {
+                        text: '折线图堆叠'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        // data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+                        data: ['传感器一', '传感器二', '传感器三']
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    toolbox: {
+                        feature: {
+                            saveAsImage: {}
+                        }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['0：00', '4：00', '8：00', '12：00', '16：00', '20：00']
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    // series:[]
+                    series: [
+                        {
+                            name: '传感器一',
+                            type: 'line',
+                            stack: '总量',
+                            data: [120, 132, 101, 134, 90, 230, 210]
                         },
-                        tooltip: {
-                            trigger: "axis"
+                        {
+                            name: '传感器二',
+                            type: 'line',
+                            stack: '总量',
+                            data: [220, 182, 191, 234, 290, 330, 310]
                         },
-                        legend: {
-                            data: ["会员", "文章", "评论"],
-                            selectedMode: false,
+                        {
+                            name:'传感器三',
+                            type:'line',
+                            stack: '总量',
+                            data:[150, 232, 201, 154, 190, 330, 410]
                         },
-                        toolbox: {
-                            show: true,
-                            feature: {
-                                dataView: {
-                                    show: false,
-                                    readOnly: true
-                                },
-                                magicType: {
-                                    show: false,
-                                    type: ["line", "bar", "stack", "tiled"]
-                                },
-                                restore: {
-                                    show: true
-                                },
-                                saveAsImage: {
-                                    show: true
-                                },
-                                mark: {
-                                    show: false
+                        // {
+                        //     name:'直接访问',
+                        //     type:'line',
+                        //     stack: '总量',
+                        //     data:[320, 332, 301, 334, 390, 330, 320]
+                        // },
+                        // {
+                        //     name:'搜索引擎',
+                        //     type:'line',
+                        //     stack: '总量',
+                        //     data:[820, 932, 901, 934, 1290, 1330, 1320]
+                        // }
+                    ]
+                });
+
+
+                var option = {
+                    title: {
+                        text: '折线图堆叠'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data: ['传感器一', '传感器二', '传感器三']
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    toolbox: {
+                        feature: {
+                            saveAsImage: {}
+                        }
+                    },
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: ['0：00', '4：00', '8：00', '12：00', '16：00', '20：00']
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [
+                        {
+                            name: '传感器一',
+                            type: 'line',
+                            stack: '总量',
+                            data: [120, 132, 101, 134, 90, 230, 210]
+                        },
+                        {
+                            name: '传感器二',
+                            type: 'line',
+                            stack: '总量',
+                            data: [220, 182, 191, 234, 290, 330, 310]
+                        },       {
+                            name: '传感器三',
+                            type: 'line',
+                            stack: '总量',
+                            data: [220, 182, 191, 234, 290, 330, 310]
+                        },
+
+                    ]
+                };
+
+                $(document).ready(function () {
+                    $("button").click(function () {
+                        // var a = ("Value:" + $("#license").val());
+                        // var b = ("Value:" + $("#date").val());
+                        var a = $("#license").val();
+                        var b = $("#date").val();
+                        // alert(a)
+                        // alert(b)
+                        //渲染数据
+                        $.ajax({
+                            type: "POST",
+                            url: '<%=basePath%>/android/searchShow?license=' + a + "&date=" + b,
+                            dataType: "json",
+                            success: function (result) {
+                                //将从后台接收的json字符串转换成json对象
+                                var jsonobj = eval(result);
+                                // alert(jsonobj);
+                                //给图标标题赋值
+                                // option.legend.data = jsonobj.legend;
+                                //读取横坐标值
+                                // option.xAxis[0].data = jsonobj.axis;
+                                var series_arr = jsonobj.series;
+                                // alert(series_arr)
+                                var bean = eval(jsonobj)
+                                // myChart.showLoading();
+                                //驱动图表生成的数据内容，数组中每一项代表一个系列的特殊选项及数据
+                                for (var i = 0; i < series_arr.length; i++) {
+                                    // alert(result.series[i]);
+                                    option.series[i] = result.series[i];
                                 }
+                                //过渡控制，隐藏loading（读取中）
+                                myChart.hideLoading();
+                                // 为echarts对象加载数据
+                                myChart.setOption(option);
+                                // alert("set option success")
                             }
-                        },
-                        calculable: false,
-                        xAxis: [
-                            {
-                                type: "category",
-                                boundaryGap: false,
-                                data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
-                            }
-                        ],
-                        yAxis: [
-                            {
-                                type: "value"
-                            }
-                        ],
-                        grid: {
-                            x2: 30,
-                            x: 50
-                        },
-                        series: [
-                            {
-                                name: "会员",
-                                type: "line",
-                                smooth: true,
-                                itemStyle: {
-                                    normal: {
-                                        areaStyle: {
-                                            type: "default"
-                                        }
-                                    }
-                                },
-                                data: [10, 12, 21, 54, 260, 830, 710]
-                            },
-                            {
-                                name: "文章",
-                                type: "line",
-                                smooth: true,
-                                itemStyle: {
-                                    normal: {
-                                        areaStyle: {
-                                            type: "default"
-                                        }
-                                    }
-                                },
-                                data: [30, 182, 434, 791, 390, 30, 10]
-                            },
-                            {
-                                name: "评论",
-                                type: "line",
-                                smooth: true,
-                                itemStyle: {
-                                    normal: {
-                                        areaStyle: {
-                                            type: "default"
-                                        },
-                                        color: "rgb(110, 211, 199)"
-                                    }
-                                },
-                                data: [1320, 1132, 601, 234, 120, 90, 20]
-                            }
-                        ]
-                    }
-                );
+                        });
+//
+                    })
+                });
             }
         );
         $(window).resize(function () {
             myChart.resize();
         })
-
     });
-</script>
-<script>
-    layui.use('form', function () {
-    });<!--加载form模块-->
 </script>
 </body>
 </html>
