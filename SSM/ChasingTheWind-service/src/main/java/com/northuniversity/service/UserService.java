@@ -1,8 +1,7 @@
 package com.northuniversity.service;
 
+
 import com.northuniversity.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,15 +11,11 @@ import java.util.List;
  */
 
 public interface UserService {
+     //user私有的方法放在这
      List<User> getUser(int id);
-
-     void insertUser(int id, String name, int age, String sex);
-
-     List<User> selectAll();
-
-     Object update();
-
-     User getUserByName(String uname);
-
-     void updateBid(User user);
+     List<User> selectAllUser();
+     User get(User user);
+     User saveUser(User user);
+     boolean deleteByNumber(String number);
+     User searchByNumber(String number);
 }

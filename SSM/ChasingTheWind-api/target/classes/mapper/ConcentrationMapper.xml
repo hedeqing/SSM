@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.northuniversity.mapper.ConcentrationMapper">
+    <select id="selectAllConcentration" resultType="com.northuniversity.model.Concentration">
+        SELECT * FROM concentration
+    </select>
+<!--    <select id="searchByConcentrationIdAndDate" resultType="com.northuniversity.model.Concentration">-->
+<!--        SELECT * FROM concentration-->
+<!--        where date like #{date}-->
+<!--    </select>-->
+    <select id="searchByConcentrationIdAndDate"  resultType="com.northuniversity.model.Concentration">
+                SELECT * FROM concentration
+                where concentrationid = #{param.concentrationId}
+                and date=#{param.date}
+    </select>
+    <select id="findByConcentrationIdAndDate"  resultType="com.northuniversity.model.Concentration">
+                SELECT * FROM concentration
+                where concentrationid = #{param.concentrationId}
+                and date=#{param.date}
+    </select>
+</mapper>
