@@ -54,4 +54,9 @@ public class CarServiceImpl extends IBaseServiceImpl<Car> implements CarService 
     public Car searchByLicense(String license) {
         return carMapper.searchByLicense(license);
     }
+
+    @Override
+    public List<Car> searchByNumber(String number) {
+        return carMapper.searchByNumber(number);
+    }
 }

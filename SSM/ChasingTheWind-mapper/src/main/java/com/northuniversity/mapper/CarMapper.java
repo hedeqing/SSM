@@ -9,6 +9,7 @@ import java.util.Map;
 public interface CarMapper {
     List<Car> selectAllCar();
     List<Car> getCar(String license);
+    List<Car> searchByNumber(String number);
     Car get(@Param("param") Car car);
     Car saveCar(@Param("param") Car car);
     boolean deleteByLicense(String license);

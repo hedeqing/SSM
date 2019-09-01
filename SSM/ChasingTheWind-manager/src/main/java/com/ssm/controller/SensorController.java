@@ -99,13 +99,7 @@ public class SensorController {
         Sensor sensor_find = null;
         List<Sensor> sensors = new ArrayList<>();
         String license = request.getParameter("license");
-//        System.out.println("sensor = "+sensor);
-//        System.out.println(sensor.getLicense());
-//        System.out.println(request.getParameter("number"));
         sensors = sensorService.searchByLicenseList(license);
-//        List<Sensor> sensors =new ArrayList<>();
-        //注意，data需要是list类型，不然无法正确渲染数据
-//        sensors.add(sensor_find);
         System.out.println(sensor_find);
         map.put("code", 0);
         map.put("msg", "");

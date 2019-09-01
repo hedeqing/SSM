@@ -9,8 +9,8 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>后台登录</title>
-		<link rel="stylesheet" type="text/css" href="jsp/static/admin/layui/css/layui.css" />
-		<link rel="stylesheet" type="text/css" href="jsp/static/admin/css/login.css" />
+		<link rel="stylesheet" type="text/css" href="/jsp/static/admin/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="/jsp/static/admin/css/login.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/admin/css/login.css" />
 	</head>
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 		<script src="../../static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
-		<script src="jsp/static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<%--		<script src="jsp/static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>--%>
 		<script>
 			layui.use(['form', 'layedit', 'laydate'], function() {
 				var form = layui.form(),

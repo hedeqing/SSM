@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="ChasingTheWind-manager:war2">
-    <output-path>$PROJECT_DIR$/out/artifacts/ChasingTheWind_manager_war2</output-path>
-    <root id="archive" name="ChasingTheWind-manager_war.war">
-      <element id="artifact" artifact-name="ChasingTheWind-manager:war exploded" />
-    </root>
-  </artifact>
-</component>

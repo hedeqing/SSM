@@ -154,10 +154,6 @@
                         <p class="title">服务器域名</p>
                         <span class="info">localhost </span>
                     </div>
-<%--                    <div class="col-md-2">--%>
-<%--                        <p class="title"> PHP版本</p>--%>
-<%--                        <span class="info">5.4.16</span>--%>
-<%--                    </div>--%>
                     <div class="col-md-2">
                         <p class="title">数据库信息</p>
                         <span class="info">8.0 </span>
@@ -312,12 +308,8 @@
 
                 $(document).ready(function () {
                     $("button").click(function () {
-                        // var a = ("Value:" + $("#license").val());
-                        // var b = ("Value:" + $("#date").val());
                         var a = $("#license").val();
                         var b = $("#date").val();
-                        // alert(a)
-                        // alert(b)
                         //渲染数据
                         $.ajax({
                             type: "POST",

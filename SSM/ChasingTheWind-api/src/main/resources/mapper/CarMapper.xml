@@ -18,6 +18,9 @@
     <select id="searchByLicense" resultType="com.northuniversity.model.Car">
         select * from car  where license like #{license}
     </select>
+    <select id="searchByNumber" resultType="com.northuniversity.model.Car">
+        select * from car  where number like #{number }
+    </select>
     <select id="update" resultType="com.northuniversity.model.User">
         update car
         <set>

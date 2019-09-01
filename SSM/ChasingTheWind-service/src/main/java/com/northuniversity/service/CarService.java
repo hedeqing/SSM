@@ -13,5 +13,6 @@ public interface CarService {
     boolean update(Car car);
     boolean deleteByLicense(String license);
     Car searchByLicense(String license);
+    List<Car> searchByNumber(String number);
 
 }

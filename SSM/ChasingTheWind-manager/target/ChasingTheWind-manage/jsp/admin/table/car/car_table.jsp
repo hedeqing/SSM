@@ -13,7 +13,7 @@
     <!--<meta charset="utf-8">-->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
     <title>后台大布局</title>
-    <link rel="stylesheet" href="/jsp/static/plugins/layuiadmin/layui/css/layui.css">
+    <link rel="stylesheet" href="../../../static/plugins/layuiadmin/layui/css/layui.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!--<style>-->
 
@@ -56,7 +56,7 @@
 </div>
 
 
-<script src="/jsp/static/plugins/layuiadmin/layui/layui.js"></script>
+<script src="../../../static/plugins/layuiadmin/layui/layui.js"></script>
 <script>
     //JavaScript代码区域
 
@@ -83,7 +83,7 @@
             elem: '#demo'
             , height: 420
             // , url: 'http://localhost:8080/user/search?number=123456' //数据接口
-            ,url: 'http://localhost:8080/car/selectAllCar' //数据接口
+            ,url: '<%=basePath%>/car/selectAllCar' //数据接口
             , title: '汽车表'
             , id: 'testReload'
             , page: true //开启分页
@@ -109,7 +109,7 @@
                         title : '添加车辆',
                         type : 2,
                         area: ['500px', '500px'],
-                        content : 'http://localhost:8080/car/addCarJsp',//这是 URL，直接发送的这个请求controller会接受到并返回userList页面。也就是弹出来的页面
+                        content : '<%=basePath%>/car/addCarJsp',//这是 URL，直接发送的这个请求controller会接受到并返回userList页面。也就是弹出来的页面
                         // btn : ['确定'] ,
                         yes : function(index , layero){
                             layer.close(index);
