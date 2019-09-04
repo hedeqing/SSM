@@ -6,6 +6,9 @@
     <select id="selectAllConcentration" resultType="com.northuniversity.model.Concentration">
         SELECT * FROM concentration
     </select>
+    <select id="insert" resultType="com.northuniversity.model.Concentration">
+        SELECT * FROM concentration
+    </select>
 <!--    <select id="searchByConcentrationIdAndDate" resultType="com.northuniversity.model.Concentration">-->
 <!--        SELECT * FROM concentration-->
 <!--        where date like #{date}-->

@@ -16,5 +16,6 @@ public interface ConcentrationService {
 //    Concentration searchByNumber(String number);
     List<Concentration> searchByConcentrationIdAndDate(Concentration concentration);
     boolean findByConcentrationIdAndDate( Concentration concentration);
+    Concentration insert(Concentration concentration);
 
 }

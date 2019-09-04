@@ -14,6 +14,9 @@
           <element id="module-output" name="ChasingTheWind-manager" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="ChasingTheWind-manager-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="ChasingTheWind-manager" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.14.RELEASE" />
           <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.14.RELEASE" />
@@ -67,6 +70,11 @@
           <element id="archive" name="ChasingTheWind-api-1.0-SNAPSHOT.jar">
             <element id="module-output" name="ChasingTheWind-api" />
           </element>
+          <element id="library" level="project" name="Maven: org.quartz-scheduler:quartz:2.3.0" />
+          <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.2" />
+          <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.11" />
+          <element id="library" level="project" name="Maven: com.zaxxer:HikariCP-java6:2.3.13" />
+          <element id="library" level="project" name="Maven: org.json:json:20190722" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -35,11 +35,29 @@
         <groupId>com.northuniversity</groupId>
         <version>1.0-SNAPSHOT</version>
     </dependency>
+<!--    <dependency>-->
+<!--        <artifactId>ChasingTheWind-service</artifactId>-->
+<!--        <groupId>com.northuniversity</groupId>-->
+<!--        <version>1.0-SNAPSHOT</version>-->
+<!--    </dependency>-->
     <dependency>
-        <artifactId>ChasingTheWind-service</artifactId>
-        <groupId>com.northuniversity</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>org.quartz-scheduler</groupId>
+        <artifactId>quartz</artifactId>
+        <version>RELEASE</version>
+        <scope>compile</scope>
     </dependency>
+    <dependency>
+        <groupId>org.quartz-scheduler</groupId>
+        <artifactId>quartz</artifactId>
+        <version>2.3.1</version>
+        <scope>compile</scope>
+    </dependency>
+<!--    <dependency>-->
+<!--        <groupId>com.northuniversity</groupId>-->
+<!--        <artifactId>ChasingTheWind-manager</artifactId>-->
+<!--        <version>1.0-SNAPSHOT</version>-->
+<!--        <scope>compile</scope>-->
+<!--    </dependency>-->
 </dependencies>
 
 

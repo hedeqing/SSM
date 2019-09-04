@@ -20,7 +20,6 @@ public class ConcentrationServiceImpl extends IBaseServiceImpl<Concentration> im
     }
 
 
-
     @Override
     public List<Concentration> selectAllConcentration() {
         return concentrationMapper.selectAllConcentration();
@@ -34,6 +33,11 @@ public class ConcentrationServiceImpl extends IBaseServiceImpl<Concentration> im
     @Override
     public boolean findByConcentrationIdAndDate(Concentration concentration) {
         return concentrationMapper.findByConcentrationIdAndDate(concentration);
+    }
+
+    @Override
+    public Concentration insert(Concentration concentration) {
+        return concentrationMapper.insert(concentration);
     }
 
 

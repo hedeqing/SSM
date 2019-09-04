@@ -16,12 +16,12 @@
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
     <dependencies>
-        <dependency>
-            <groupId>com.northuniversity</groupId>
-            <artifactId>ChasingTheWind-service</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.northuniversity</groupId>-->
+<!--            <artifactId>ChasingTheWind-service</artifactId>-->
+<!--            <version>1.0-SNAPSHOT</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>

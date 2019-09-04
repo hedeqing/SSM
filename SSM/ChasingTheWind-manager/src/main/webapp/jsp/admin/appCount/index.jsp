@@ -12,11 +12,12 @@
     <!--<meta charset="utf-8">-->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
     <title>后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="/jsp/static/admin/css/admin.css"/>
+    <link rel="stylesheet" type="text/css" href="/jsp/static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" href="../../static/plugins/layuiadmin/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css"/>
     <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
-    <link rel="stylesheet" type="text/css" href="/jsp/static/admin/css/admin.css"/>
-    <link rel="stylesheet" type="text/css" href="/jsp/static/admin/layui/css/layui.css"/>
+
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <!--<style>-->

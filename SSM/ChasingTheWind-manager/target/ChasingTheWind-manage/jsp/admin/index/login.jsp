@@ -9,10 +9,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>后台登录</title>
-		<link rel="stylesheet" type="text/css" href="/jsp/static/admin/layui/css/layui.css" />
-		<link rel="stylesheet" type="text/css" href="/jsp/static/admin/css/login.css" />
+
 		<link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/admin/css/login.css" />
+		<link rel="stylesheet" type="text/css" href="/jsp/static/admin/layui/css/layui.css" />
+		<link rel="stylesheet" type="text/css" href="/jsp/static/admin/css/login.css" />
 	</head>
 
 	<body>
@@ -67,10 +68,7 @@
 					},
 					password: [/(.+){6,12}$/, '密码必须6到12位'],
 					verity: [/(.+){6}$/, '验证码必须是6位'],
-					
 				});
-
-				
 				//监听提交
 				form.on('submit(login)', function(data) {
 					layer.alert(JSON.stringify(data.field), {

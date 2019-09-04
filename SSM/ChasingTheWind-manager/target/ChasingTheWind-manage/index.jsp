@@ -8,11 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+
+    <link rel="stylesheet" type="text/css" href="/jsp/static/admin/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="/jsp/static/admin/css/admin.css"/>
+    <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
+
     <link rel="stylesheet" href="../../static/plugins/layuiadmin/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="../../static/admin/layui/css/layui.css"/>
-    <link rel="stylesheet" type="text/css" href="/jsp/static/admin/layui/css/layui.css"/>
-    <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
-    <link rel="stylesheet" type="text/css" href="/jsp/static/admin/css/admin.css"/>
+
+
     <title>Title</title>
 </head>
 <body>
