@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.northuniversity.mapper.SensorMapper">
+    <select id="selectAllSensor" resultType="com.northuniversity.model.Sensor">
+        SELECT * FROM sensor
+    </select>
+    <select id="getSensor" resultType="com.northuniversity.model.Sensor">
+        SELECT * FROM sensor
+        where license = #{license}
+    </select>
+    <select id="saveSensor" resultType="com.northuniversity.model.Sensor">
+        INSERT INTO sensor (license, concentrationid, sensorname) values(#{param.license},#{param.concentrationId},#{param.sensorName})
+    </select>
+    <select id="deleteByLicense" resultType="com.northuniversity.model.Sensor">
+        delete from sensor where license=#{license}
+
+    </select>
+    <select id="searchByLicense" resultType="com.northuniversity.model.Sensor">
+        select * from sensor  where license like #{license}
+    </select>
+    <select id="searchByLicenseList" resultType="com.northuniversity.model.Sensor">
+        select * from sensor  where license like #{license}
+    </select>
+    <select id="findByConcentrationId" resultType="com.northuniversity.model.Sensor">
+        select * from sensor  where concentrationid like #{concentrationId}
+    </select>
+    <select id="update" resultType="com.northuniversity.model.Sensor">
+        update sensor
+        <set>
+            <if test="param.sensorName != null">
+                sensorName = #{param.sensorName},
+            </if>
+        </set>
+        where id = #{param.id}
+    </select>
+</mapper>

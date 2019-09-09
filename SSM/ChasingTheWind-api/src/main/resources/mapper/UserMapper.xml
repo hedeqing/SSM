@@ -3,25 +3,46 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.northuniversity.mapper.UserMapper">
-    <select id="getUser" parameterType="java.util.Map" resultType="com.northuniversity.model.User">
-        SELECT *
-        FROM user
-        where id =#{param.id}
-    </select>
-    <insert id="insertUser" parameterType="java.util.Map">
-        INSERT INTO user (id,name,age,sex) values(#{param.id},#{param.name},#{param.age},#{param.sex})
-    </insert>
-    <select id="selectAll" resultType="com.northuniversity.model.User">
+    <select id="selectAllUser" resultType="com.northuniversity.model.User">
         SELECT * FROM user
     </select>
-    <update id="update" parameterType="java.util.Map">
-        UPDATE USER  SET id=id-#{param.total},age=age+#{param.total}
-        WHERE name=#{param.name}
-    </update>
-    <select id="getUserByName" parameterType="java.lang.String" resultType="com.northuniversity.model.User">
-        SELECT * FROM USER  WHERE name=#{param}
+    <select id="selectUser" resultType="com.northuniversity.model.User">
+         SELECT * FROM user
+        where number = #{param.number}
+        and password = #{param.password}
     </select>
-    <update id="updateBid" parameterType="com.northuniversity.model.User" >
-        UPDATE USER SET bid=#{param.bid} WHERE id=#{param.id}
-    </update>
+    <select id="getUserByNumber" resultType="com.northuniversity.model.User">
+         SELECT * FROM user
+        where number = #{param.number}
+    </select>
+    <select id="saveUser" resultType="com.northuniversity.model.User">
+        INSERT INTO user (username, gender, number, password) values(#{param.userName},#{param.gender},#{param.number},#{param.password})
+    </select>
+    <select id="deleteByNumber" resultType="com.northuniversity.model.User">
+        delete from user where number=#{number}
+
+    </select>
+    <select id="searchByNumber" resultType="com.northuniversity.model.User">
+        select * from user  where number like #{number}
+    </select>
+    <select id="update" resultType="com.northuniversity.model.User">
+        update user
+
+        <set>
+            <if test="param.userName != null">
+                username = #{param.userName},
+            </if>
+            <if test="param.gender != null">
+                gender = #{param.gender},
+            </if>
+              <if test="param.number != null">
+                number = #{param.number},
+            </if>
+            <if test="param.password != null">
+                password = #{param.password}
+            </if>
+        </set>
+        where id = #{param.id}
+    </select>
+
 </mapper>
