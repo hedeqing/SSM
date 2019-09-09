@@ -60,4 +60,9 @@ public class SensorServiceImpl extends IBaseServiceImpl<Sensor> implements Senso
     public List<Sensor> searchByLicenseList(String license) {
         return sensorMapper.searchByLicenseList(license);
     }
+
+    @Override
+    public Sensor findByConcentrationId(String concentrationId) {
+        return sensorMapper.findByConcentrationId(concentrationId);
+    }
 }

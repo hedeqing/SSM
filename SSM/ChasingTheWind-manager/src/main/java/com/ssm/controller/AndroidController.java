@@ -40,6 +40,16 @@ public class AndroidController {
     @Autowired
     private SensorServiceImpl sensorService;
 
+    @RequestMapping("findNumberByConcentrationid")
+    @ResponseBody
+    public String findNumber(HttpServletRequest request){
+        String concentrationid = request.getParameter("concentrationid");
+        Sensor sensor  = sensorService.findByConcentrationId(concentrationid);
+        String license = sensor.getLicense();
+        Car car = carService.searchByLicense(license);
+        String number =car.getNumber();
+        return  number;
+    }
     //    @RequestMapping(value = "/login")
 //    @ResponseBody
 //    public Object login(User user) {
@@ -160,8 +170,6 @@ public class AndroidController {
 //    @ResponseBody
     public Object search(Concentration concentration, HttpServletRequest request, HttpServletResponse response) {
         System.out.println("search 函数");
-
-
         Map<String, Object> map = new HashMap<>();
         String msg = "";
         String license = request.getParameter("license");
@@ -212,5 +220,15 @@ public class AndroidController {
         map.put("series", echartsModels);
         System.out.println(map);
         return map;
+    }
+
+    @RequestMapping("insertConcentration")
+    @ResponseBody
+    public Object insert(Concentration concentration) {
+        if(concentrationService.insertConcentration(concentration)!= null){
+            return "insert successful";
+        }
+        else
+            return "insert fail";
     }
 }

@@ -36,8 +36,8 @@ public class ConcentrationServiceImpl extends IBaseServiceImpl<Concentration> im
     }
 
     @Override
-    public Concentration insert(Concentration concentration) {
-        return concentrationMapper.insert(concentration);
+    public Concentration insertConcentration(Concentration concentration) {
+        return concentrationMapper.insertConcentration(concentration);
     }
 
 

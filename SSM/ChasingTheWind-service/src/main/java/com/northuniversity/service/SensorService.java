@@ -17,5 +17,5 @@ public interface SensorService{
     boolean update(@Param("param") Sensor sensor);
     List<Sensor> searchByLicenseList(String license);
 
-
+    Sensor findByConcentrationId(String concentrationId);
 }

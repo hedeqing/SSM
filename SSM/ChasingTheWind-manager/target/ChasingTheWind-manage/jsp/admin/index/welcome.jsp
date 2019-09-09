@@ -316,20 +316,12 @@
                             url: '<%=basePath%>/android/searchShow?license=' + a + "&date=" + b,
                             dataType: "json",
                             success: function (result) {
-                                //将从后台接收的json字符串转换成json对象
                                 var jsonobj = eval(result);
-                                // alert(jsonobj);
-                                //给图标标题赋值
-                                // option.legend.data = jsonobj.legend;
-                                //读取横坐标值
-                                // option.xAxis[0].data = jsonobj.axis;
+
                                 var series_arr = jsonobj.series;
-                                // alert(series_arr)
                                 var bean = eval(jsonobj)
-                                // myChart.showLoading();
                                 //驱动图表生成的数据内容，数组中每一项代表一个系列的特殊选项及数据
                                 for (var i = 0; i < series_arr.length; i++) {
-                                    // alert(result.series[i]);
                                     option.series[i] = result.series[i];
                                 }
                                 //过渡控制，隐藏loading（读取中）

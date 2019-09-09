@@ -1,4 +1,4 @@
-package com.ssm.controller;
+package com.ssm.controller;//package com.ssm.controller;
 
 
 import org.quartz.*;
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
+//定时任务初始化需要加component关键字
 @Component
 public class QuartzService {
 //    private static final Logger logger = LoggerFactory.getLogger(QuartzService.class);

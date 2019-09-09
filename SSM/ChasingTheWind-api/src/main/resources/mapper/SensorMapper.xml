@@ -23,6 +23,9 @@
     <select id="searchByLicenseList" resultType="com.northuniversity.model.Sensor">
         select * from sensor  where license like #{license}
     </select>
+    <select id="findByConcentrationId" resultType="com.northuniversity.model.Sensor">
+        select * from sensor  where concentrationid like #{concentrationId}
+    </select>
     <select id="update" resultType="com.northuniversity.model.Sensor">
         update sensor
         <set>

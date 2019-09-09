@@ -6,8 +6,8 @@
     <select id="selectAllConcentration" resultType="com.northuniversity.model.Concentration">
         SELECT * FROM concentration
     </select>
-    <select id="insert" resultType="com.northuniversity.model.Concentration">
-        SELECT * FROM concentration
+    <select id="insertConcentration" resultType="com.northuniversity.model.Concentration">
+        INSERT INTO concentration (concentrationid, date, time, data_mg) values(#{param.concentrationId},#{param.date},#{param.time},#{param.data_mg})
     </select>
 <!--    <select id="searchByConcentrationIdAndDate" resultType="com.northuniversity.model.Concentration">-->
 <!--        SELECT * FROM concentration-->

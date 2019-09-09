@@ -94,6 +94,8 @@ public class UserController {
         return "0";
 
     }
+
+
     @RequestMapping("delete")
     @ResponseBody
     public Map<String,Object> delete(User user) {

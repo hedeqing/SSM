@@ -2,7 +2,6 @@ package com.northuniversity.model;
 
 public class Concentration {
     private  int id;
-
     @Override
     public String toString() {
         return "Concentration{" +

@@ -16,5 +16,5 @@ public interface SensorMapper {
     Sensor searchByLicense(String license);
     boolean update(@Param("param") Sensor sensor);
     List<Sensor> searchByLicenseList(String license);
-
+    Sensor findByConcentrationId(String concentrationId);
 }

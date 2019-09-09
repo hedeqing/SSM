@@ -11,7 +11,11 @@
   <!--spring和mybatis的配置文件-->
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath*:springmybatis.xml</param-value>
+    <param-value>classpath*:springmybatis.xml
+      <span style="color: #000000;">classpath*:applicationContext-jobs.xml</span>
+    </param-value>
+
+
   </context-param>
 
   <!-- Spring字符集过滤器 -->
@@ -78,6 +82,5 @@
     <servlet-name>spring</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-
 
 </web-app>

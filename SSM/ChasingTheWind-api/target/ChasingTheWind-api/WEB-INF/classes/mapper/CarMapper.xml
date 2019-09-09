@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.northuniversity.mapper.CarMapper">
+    <select id="selectAllCar" resultType="com.northuniversity.model.Car">
+        SELECT * FROM car
+    </select>
+
+<!--   注意，model后面不能有空格，否则是被不出来 /-->
+    <select id="saveCar" resultType="com.northuniversity.model.Car">
+        INSERT INTO car (number, license) values(#{param.number},#{param.license})
+    </select>
+    <select id="deleteByLicense" resultType="com.northuniversity.model.Car">
+        delete from car where license=#{license}
+
+    </select>
+    <select id="searchByLicense" resultType="com.northuniversity.model.Car">
+        select * from car  where license like #{license}
+    </select>
+    <select id="searchByNumber" resultType="com.northuniversity.model.Car">
+        select * from car  where number like #{number }
+    </select>
+    <select id="update" resultType="com.northuniversity.model.User">
+        update car
+        <set>
+            <if test="param.license != null">
+                license = #{param.license},
+            </if>
+        </set>
+        where id = #{param.id}
+    </select>
+</mapper>
