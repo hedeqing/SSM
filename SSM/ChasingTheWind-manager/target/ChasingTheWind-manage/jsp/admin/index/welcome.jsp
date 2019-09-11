@@ -210,8 +210,7 @@
                         trigger: 'axis'
                     },
                     legend: {
-                        // data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
-                        data: ['传感器一', '传感器二', '传感器三']
+                        data: ['传感器一', '传感器二']
                     },
                     grid: {
                         left: '3%',
@@ -237,33 +236,34 @@
                             name: '传感器一',
                             type: 'line',
                             stack: '总量',
-                            data: [120, 132, 101, 134, 90, 230, 210,120, 132, 101, 134, 90, 230, 210]
+                            data: [0,0,0,0,0,0,0,0,0,0,0,0]
                         },
                         {
                             name: '传感器二',
                             type: 'line',
                             stack: '总量',
-                            data: [220, 182, 191, 234, 290, 330, 310,220, 182, 191, 234, 290, 330, 310]
+                            data: [0,0,0,0,0,0,0,0,0,0,0,0]
+
                         },
-                        {
-                            name: '传感器三',
-                            type: 'line',
-                            stack: '总量',
-                            data: [150, 232, 201, 154, 190, 330, 410,150, 232, 201, 154, 190, 330, 410]
-                        },
+                        // {
+                        //     name: '传感器三',
+                        //     type: 'line',
+                        //     stack: '总量',
+                        //     data: [150, 232, 201, 154, 190, 330, 410,150, 232, 201, 154, 190, 330, 410]
+                        // },
                     ]
                 });
 
 
                 var option = {
                     title: {
-                        text: '折线图堆叠'
+                        text: 'CO浓度折线图'
                     },
                     tooltip: {
                         trigger: 'axis'
                     },
                     legend: {
-                        data: ['传感器一', '传感器二', '传感器三']
+                        data: ['传感器一', '传感器二']
                     },
                     grid: {
                         left: '3%',
@@ -284,24 +284,27 @@
                     yAxis: {
                         type: 'value'
                     },
+
                     series: [
                         {
                             name: '传感器一',
                             type: 'line',
                             stack: '总量',
-                            data: [120, 132, 101, 134, 90, 230, 210,120, 132, 101, 134, 90, 230, 210]
+                            // data: [120, 132, 101, 134, 90, 230, 210,120, 132, 101, 134, 90, 230, 210]
+                            data: [0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0]
                         },
                         {
                             name: '传感器二',
                             type: 'line',
                             stack: '总量',
-                            data: [220, 182, 191, 234, 290, 330, 310,220, 182, 191, 234, 290, 330, 310]
-                        }, {
-                            name: '传感器三',
-                            type: 'line',
-                            stack: '总量',
                             data: [0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0]
                         },
+                        // {
+                        //     name: '传感器三',
+                        //     type: 'line',
+                        //     stack: '总量',
+                        //     data: [0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0]
+                        // },
 
                     ]
                 };
@@ -311,27 +314,30 @@
                         var a = $("#license").val();
                         var b = $("#date").val();
                         //渲染数据
-                        $.ajax({
-                            type: "POST",
-                            url: '<%=basePath%>/android/searchShow?license=' + a + "&date=" + b,
-                            dataType: "json",
-                            success: function (result) {
-                                var jsonobj = eval(result);
+                        setInterval(function () {
+                            $.ajax({
+                                type: "POST",
+                                url: '<%=basePath%>/android/searchShow?license=' + a + "&date=" + b,
+                                dataType: "json",
+                                success: function (result) {
+                                    var jsonobj = eval(result);
 
-                                var series_arr = jsonobj.series;
-                                var bean = eval(jsonobj)
-                                //驱动图表生成的数据内容，数组中每一项代表一个系列的特殊选项及数据
-                                for (var i = 0; i < series_arr.length; i++) {
-                                    option.series[i] = result.series[i];
+                                    var series_arr = jsonobj.series;
+                                    var bean = eval(jsonobj)
+                                    //驱动图表生成的数据内容，数组中每一项代表一个系列的特殊选项及数据
+                                    for (var i = 0; i < series_arr.length; i++) {
+                                        option.series[i] = result.series[i];
+                                    }
+                                    //过渡控制，隐藏loading（读取中）
+                                    myChart.hideLoading();
+                                    // 为echarts对象加载数据
+                                    myChart.setOption(option);
+                                    // alert("set option success")
                                 }
-                                //过渡控制，隐藏loading（读取中）
-                                myChart.hideLoading();
-                                // 为echarts对象加载数据
-                                myChart.setOption(option);
-                                // alert("set option success")
-                            }
-                        });
+                            });
 //
+                        }, 1000);
+
                     })
                 });
             }

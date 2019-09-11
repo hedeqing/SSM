@@ -36,7 +36,6 @@ public class QuartzJobFactory implements Job {
     int index = 0;
     private static int turn = 0;
     private static int time = 0;
-    private static int concentrationId = 1;
 
     public String getDate() {
         SimpleDateFormat df = new SimpleDateFormat("yyyy");//设置日期格式
@@ -65,15 +64,17 @@ public class QuartzJobFactory implements Job {
         System.out.println(" 第  " + turn + " 次");
         if (time >= 23) {
             time = 0;
-            concentrationId++;
         }
-        if (turn == 3) {
+        if (turn == 2) {
             turn = 0;
             try {
                 final Concentration concentration = new Concentration();
+                final Concentration concentration2 = new Concentration();
                 concentration.setDate(getDate());
+                concentration2.setDate(getDate());
                 concentration.setTime(time);
-                concentration.setConcentrationId(String.valueOf(concentrationId));
+                concentration2.setTime(time);
+//                concentration.setConcentrationId(String.valueOf(concentrationId));
                 final String url = "http://192.168.0.1/cgi-bin/node.cgi/";
                 StringBuilder stringBuilder = new StringBuilder();
                 URL mine_url = new URL(url);
@@ -85,37 +86,66 @@ public class QuartzJobFactory implements Job {
                 }
                 in.close();
                 JSONArray jsonArray = new JSONArray(stringBuilder.toString());
-                JSONObject jsonObject = jsonArray.getJSONObject(5);
+//传感器一
+                System.out.println("jsonarray"+jsonArray);
+                concentration.setConcentrationId(String.valueOf(1));
+                JSONObject jsonObject = jsonArray.getJSONObject(2);
                 JSONArray jsonArray1 = jsonObject.getJSONArray("funcList");
-                System.out.println(jsonArray1);
                 JSONObject jsonObject1 = jsonArray1.getJSONObject(0);
                 System.out.println(jsonObject1.getDouble("data"));
-                concentration.setData_mg((int) jsonObject1.getDouble("data") - 300);
+                concentration.setData_mg((int) jsonObject1.getDouble("data") -280);
+                System.out.println("concentration"+concentration);
+//传感器二
+                concentration2.setConcentrationId(String.valueOf(2));
+                JSONObject jsonObject_2 = jsonArray.getJSONObject(3);
+                JSONArray jsonArray1_2 = jsonObject.getJSONArray("funcList");
+                JSONObject jsonObject1_2 = jsonArray1_2.getJSONObject(0);
+                System.out.println(jsonObject1_2.getDouble("data"));
+                concentration2.setData_mg((int) jsonObject1_2.getDouble("data") -280);
+                System.out.println("concentration2"+concentration2);
+
                 final String url1 = "http://localhost:8080/android/insertConcentration?";
-                final String param = "concentrationId=" + concentrationId + "&date=" + getDate() + "&time=" + time + "&data_mg=" + concentration.getData_mg();
+                final String param = "concentrationId=" + concentration.getConcentrationId() + "&date="+getDate()  + "&time=" + time + "&data_mg=" + concentration.getData_mg();
+                final String param2 = "concentrationId=" + concentration2.getConcentrationId() + "&date="+getDate()  + "&time=" + time + "&data_mg=" + concentration2.getData_mg();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         if (concentration.getData_mg() > 100) {
-                            String numberUrl = "http://localhost:8080/android/findNumberByConcentrationid?concentrationid=" + concentrationId;
+                            String numberUrl = "http://localhost:8080/android/findNumberByConcentrationid?concentrationid=" + concentration.getConcentrationId();
                             String number = GetPostUtil.sendPostRequest(numberUrl, null);
                             System.out.println("预警号码="+number);
                             number= number.replace("\"", "");
                             System.out.println("number = "+number);
                             String url_alart = "http://api.vm.ihuyi.com/webservice/voice.php?method=Submit&account=VM15920313&password=cdb6de36a3064623156a6fcf6983e19d&mobile=" +number+ "&content=警报警报，您的车辆有毒气体已经达到阈值，请打开窗户通风！";
                             String alartResult = GetPostUtil.sendPostRequest(url_alart, null);
-                            System.out.println("预警返回结果" + alartResult);
                         }
                         String result = GetPostUtil.sendPostRequest(url1, param);
-                        System.out.println("保存数据库结果" + result);
                     }
                 }).start();
+
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (concentration2.getData_mg() > 100) {
+                            String numberUrl = "http://localhost:8080/android/findNumberByConcentrationid?concentrationid=" + concentration2.getConcentrationId();
+                            String number = GetPostUtil.sendPostRequest(numberUrl, null);
+                            System.out.println("预警号码="+number);
+                            number= number.replace("\"", "");
+                            System.out.println("number = "+number);
+                            String url_alart = "http://api.vm.ihuyi.com/webservice/voice.php?method=Submit&account=VM15920313&password=cdb6de36a3064623156a6fcf6983e19d&mobile=" +number+ "&content=警报警报，您的车辆有毒气体已经达到阈值，请打开窗户通风！";
+                            String alartResult = GetPostUtil.sendPostRequest(url_alart, null);
+                        }
+                        String result1 = GetPostUtil.sendPostRequest(url1, param2);
+                    }
+                }).start();
+
 
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println(e.getMessage());
             }
             time += 2;
+
         }
 
     }

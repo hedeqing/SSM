@@ -14,10 +14,7 @@
     <param-value>classpath*:springmybatis.xml
       <span style="color: #000000;">classpath*:applicationContext-jobs.xml</span>
     </param-value>
-
-
   </context-param>
-
   <!-- Spring字符集过滤器 -->
   <filter>
     <filter-name>SpringEncodingFilter</filter-name>

@@ -143,6 +143,55 @@ public class AndroidController {
         map.put("data", JSONArray.fromObject(carShowConcentrations));
         return map;
     }
+    @RequestMapping("singleCar")
+    @ResponseBody
+    public Map<String, Object> showView2(Concentration concentration, HttpServletRequest request) {
+        List<Integer> data_mg = new ArrayList<>();
+        Map<String, Object> map = new HashMap<>();
+        List<List<Integer>> data_mgs = new ArrayList<>();
+        CarShowConcentration carShowConcentration = new CarShowConcentration();
+        List<CarShowConcentration> carShowConcentrations = new ArrayList<>();
+        String license1 = request.getParameter("license");
+        List<Concentration> concentrations = new ArrayList<>();
+        String date = request.getParameter("date");
+        List<Sensor> sensors = sensorService.searchByLicenseList(license1);
+            for (int i = 0; i < sensors.size(); i++) {
+                String id = sensors.get(i).getConcentrationId();
+                List<Concentration> con = new ArrayList<>();
+                concentration.setId(Integer.parseInt(id));
+                concentration.setDate(date);
+                con = concentrationService.searchByConcentrationIdAndDate(concentration);
+                concentrations.addAll(con);
+                System.out.println("addALL ");
+            }
+            List<Integer> data = new ArrayList<>();
+            for (int i = 0; i < data.size(); i++) {
+                data.add(concentrations.get(i).getData_mg());
+            }
+            List<List<Integer>> allSensorData = new ArrayList<>();
+            for (int i = 0; i < sensors.size(); i++) {
+                String id = sensors.get(i).getConcentrationId();
+                concentration.setConcentrationId(id);
+                List<Integer> sensorSingleData = new ArrayList<>();
+                List<Concentration> con = new ArrayList<>();
+                con = concentrationService.searchByConcentrationIdAndDate(concentration);
+                for (int k = 0; k < con.size(); k++) {
+                    sensorSingleData.add(con.get(k).getData_mg());
+                }
+
+                allSensorData.add(sensorSingleData);
+            }
+        data_mgs.addAll(allSensorData);
+        carShowConcentration.setData_mg(data_mgs);
+        carShowConcentration.setLicense(license1);
+        carShowConcentrations.add(carShowConcentration);
+        map.put("code", 100);
+        map.put("count", allSensorData.size());
+        map.put("msg", "获取成功");
+        map.put("data", JSONArray.fromObject(carShowConcentrations));
+        return map;
+    }
+
 
     @RequestMapping(value = "/register")
     @ResponseBody

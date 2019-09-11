@@ -14,9 +14,6 @@
           <element id="module-output" name="ChasingTheWind-api" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="ChasingTheWind-api-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="ChasingTheWind-api" />
-          </element>
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.11" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:2.6.0" />
