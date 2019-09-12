@@ -33,7 +33,7 @@ public class QuartzJobFactory implements Job {
     @Autowired
     public CarServiceImpl carService;
 
-    int index = 0;
+    private int index = 0;
     private static int turn = 0;
     private static int time = 0;
 
@@ -65,7 +65,7 @@ public class QuartzJobFactory implements Job {
         if (time >= 23) {
             time = 0;
         }
-        if (turn == 2) {
+        if (turn == 2&&index<12) {
             turn = 0;
             try {
                 final Concentration concentration = new Concentration();
@@ -145,6 +145,7 @@ public class QuartzJobFactory implements Job {
                 System.out.println(e.getMessage());
             }
             time += 2;
+            index ++;
 
         }
 
