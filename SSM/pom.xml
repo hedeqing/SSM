@@ -22,7 +22,7 @@
 
     <!--    公共版本号控制-->
     <properties>
-        <junit.version>4.11</junit.version>
+        <junit.version>4.13.1</junit.version>
         <spring.version>4.3.14.RELEASE</spring.version>
     <!--mybatis版本号,3.4.5是2017年8月发布的新版本-->
     <mybatis.version>3.4.5</mybatis.version>
